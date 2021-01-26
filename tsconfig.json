@@ -7,7 +7,5 @@
     "lib": ["es6", "dom"],
     "module": "commonjs",
     "allowSyntheticDefaultImports": true
-  },
-  "include": ["./src"],
-  "exclude": ["node_modules", "build"]
+  }
 }

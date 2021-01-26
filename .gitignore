@@ -1,1 +1,7 @@
 node_modules
+
+naverKey.ts
+
+backends/config/dev.js
+
+.DS_STORE
