@@ -16,6 +16,10 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     #root{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.9;
         width: 100%;
         height: 100%;
     }

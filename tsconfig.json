@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "strictNullChecks": true,
+    "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "react",
     "lib": ["es6", "dom"],

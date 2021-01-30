@@ -1,3 +1,5 @@
+import { css } from 'styled-components';
+
 const theme = {
   lightColor: '#f4fce3',
   middleColor: '#c0eb75',

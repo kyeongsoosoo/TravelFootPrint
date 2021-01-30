@@ -1,0 +1,29 @@
+[
+  {
+    "foodName": "chicken",
+    "idx": 0,
+    "container": [
+      { "name": "chickenplate", "num": 1 },
+      { "name": "chickenbox", "num": 1 },
+      { "name": "chickenbigbox", "num": 1 }
+    ]
+  },
+  {
+    "foodName": "burger",
+    "idx": 1,
+    "container": [
+      { "name": "burgerplate", "num": 1 },
+      { "name": "burgerbox", "num": 1 },
+      { "name": "burgerbigbox", "num": 1 }
+    ]
+  },
+  {
+    "foodName": "pizza",
+    "idx": 2,
+    "container": [
+      { "name": "pzBox", "num": 1 },
+      { "name": "pzPlate", "num": 1 },
+      { "name": "pzBigbox", "num": 1 }
+    ]
+  }
+]
