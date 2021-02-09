@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { flexCenter } from './lib/css/mixin';
+import HeaderIcon from './lib/image/header.svg';
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -9,12 +10,25 @@ const AppWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const MainBox = styled.div`
-  margin-top: 10%;
-  border-radius: 10%;
-  width: 70%;
-  height: 80%;
-  background-color: #ffffff;
+const AppHeader = styled.header`
+  width: 100%;
+  height: 20%;
+  background-image: url(${HeaderIcon});
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 `;
 
-export default { AppWrapper, MainBox };
+const AppMain = styled.main`
+  width: 100%;
+  height: 70%;
+`;
+
+const AppFooter = styled.footer`
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  color: #a4a4a3;
+`;
+
+export default { AppWrapper, AppHeader, AppMain, AppFooter };

@@ -6,11 +6,13 @@ interface IButtonWrapper {
 }
 
 const ButtonWrapper = styled.button<IButtonWrapper>`
-width: ${({ width }) => `${width}%;`}
-height: ${({ height }) => `${height}%;`}
-  background-color: ${props => props.theme.middleColor};
-  border-radius: ${({ width }) => `${width / 5}%`};
-  border: 0.2px solid rgba(0,0,0,0.3);
+  width: ${({ width }) => `${width}px`};
+  height: ${({ height }) => `${height}%`};
+  background-color: ${props => props.theme.mainColor};
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
 `;
 
 export default { ButtonWrapper };

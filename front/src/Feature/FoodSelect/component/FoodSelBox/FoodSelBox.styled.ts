@@ -2,15 +2,19 @@ import styled from 'styled-components';
 
 const FSBoxWrapper = styled.div`
   display: flex;
+  align-items: center;
   width: 80%;
-  height: 80%;
-  background-color: #ffe8cc;
+  max-width: 700px;
+  height: 70%;
 `;
 
 const FSBoxSidebarWrapper = styled.aside`
-  height: 100%;
+  height: 80%;
   width: 20%;
-  border-right: 1px solid #ffffff;
+`;
+const FSBoxMainWrapper = styled.main`
+  height: 80%;
+  width: 80%;
 `;
 
-export default { FSBoxWrapper, FSBoxSidebarWrapper };
+export default { FSBoxWrapper, FSBoxSidebarWrapper, FSBoxMainWrapper };

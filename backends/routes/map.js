@@ -36,9 +36,7 @@ router.get('/geocoding', (req, res) => {
   });
 });
 router.get('/driving', (req, res) => {
-  const Start = req.query.start.join(',');
-  const Goal = req.query.goal.join(',');
-  const driveOption = driveOptions(Start, Goal);
+  const driveOption = driveOptions(req.query.start, req.query.goal);
   request.get(driveOption, (error, response, body) => {
     const data = JSON.parse(body);
     console.log(data);

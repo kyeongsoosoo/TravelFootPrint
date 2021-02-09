@@ -1,10 +1,6 @@
 import React, { useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { minusCount, plusCount } from '../../../../../redux/food/action';
 import S from './FM.styled';
-import FoodList from '../../../Food.json';
-import { useSavingCounter } from '../../../../../hook/useSavingCounter';
-import { RootState } from '../../../../../redux';
+import FoodList from '../../../../../Food.json';
 import FMcontent from './FMcontent/FMcontent';
 import { ISelectedContainer } from '../../../../../lib/types';
 

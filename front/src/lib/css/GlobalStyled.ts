@@ -4,15 +4,12 @@ import Tree from './tree.svg';
 
 export const GlobalStyle = createGlobalStyle`
     ${reset}
+
     body{
         box-sizing: border-box;
-        background-image: url(${Tree});
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background-color: #EFF7E7;
         width: 100vw;
         height: 100vh;
-        min-width: 500px;
     }
 
     #root{
@@ -22,6 +19,10 @@ export const GlobalStyle = createGlobalStyle`
         opacity: 0.9;
         width: 100%;
         height: 100%;
+    }
+
+    main{
+        box-sizing: border-box;
     }
 
     div{
@@ -34,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     input,button {
         outline: none;
-
+        border: none;
     }
     
 `;

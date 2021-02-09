@@ -1,0 +1,35 @@
+[
+  {
+    "foodName": "chicken",
+    "idx": 0,
+    "container": [
+      { "name": "sauce", "weight": 30 },
+      { "name": "chicken-moo", "weight": 48 },
+      { "name": "chicken-box", "weight": 460 },
+      { "name": "coke-500", "weight": 83 },
+      { "name": "coke-355", "weight": 403 },
+      { "name": "bag", "weight": 10 }
+    ]
+  },
+  {
+    "foodName": "pizza",
+    "idx": 1,
+    "container": [
+      { "name": "pzBox", "weight": 506 },
+      { "name": "sauce", "weight": 30 },
+      { "name": "bag", "weight": 10 },
+      { "name": "coke-500", "weight": 83 },
+      { "name": "coke-355", "weight": 403 }
+    ]
+  },
+  {
+    "foodName": "etc",
+    "idx": 2,
+    "container": [
+      { "name": "dosirak", "weight": 36.6 },
+      { "name": "bag", "weight": 10 },
+      { "name": "coke-500", "weight": 83 },
+      { "name": "coke-355", "weight": 403 }
+    ]
+  }
+]

@@ -3,33 +3,40 @@ import { flexCenter } from '../../../../../../lib/css/mixin';
 
 const FMcontentWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: 120px;
 `;
 
 const FMcontentPhoto = styled.div`
+  ${flexCenter}
   width: 100%;
   height: 60%;
 `;
 
 const FMcontentCalWrapper = styled.div`
   display: flex;
+  justify-content: space-around;
   width: 100%;
   height: 40%;
+  padding: 0 20px;
 `;
 
-const FMcontentCalMinusBtn = styled.button`
-  width: 25%;
+const FMcontentBtn = styled.button`
+  width: 20%;
   height: 100%;
-`;
-const FMcontentCalPlusBtn = styled.button`
-  width: 25%;
-  height: 100%;
+  border-radius: 60%;
+  border: none;
+  background-color: ${props => props.theme.mainColor};
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 `;
 
 const FMcontentCalShowWrapper = styled.div`
   ${flexCenter}
-  width: 50%;
+  width: 30%;
   height: 100%;
+  border: 2px solid black;
+  border-radius: 20%;
 `;
 
 export default {
@@ -37,6 +44,5 @@ export default {
   FMcontentPhoto,
   FMcontentCalWrapper,
   FMcontentCalShowWrapper,
-  FMcontentCalPlusBtn,
-  FMcontentCalMinusBtn,
+  FMcontentBtn,
 };

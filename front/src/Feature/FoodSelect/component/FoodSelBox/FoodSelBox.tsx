@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import S from './FoodSelBox.styled';
 import FSBsidebar from './FSBsidebar/FSBsidebar';
-import FoodList from '../../Food.json';
+import FoodList from '../../../../Food.json';
 import FM from './FoodMain/FM';
 
 function FoodSelBox() {
@@ -11,13 +11,18 @@ function FoodSelBox() {
 
   return (
     <S.FSBoxWrapper>
-      <FSBsidebar
-        foodList={foodIdx}
-        selectName={selectedIdx}
-        setSetlect={setSelect}
-      />
-      <FM selectedIdx={selectedIdx} />
-      {console.log()}
+      <>
+        <S.FSBoxSidebarWrapper>
+          <FSBsidebar
+            foodList={foodIdx}
+            selectName={selectedIdx}
+            setSetlect={setSelect}
+          />
+        </S.FSBoxSidebarWrapper>
+        <S.FSBoxMainWrapper>
+          <FM selectedIdx={selectedIdx} />
+        </S.FSBoxMainWrapper>
+      </>
     </S.FSBoxWrapper>
   );
 }

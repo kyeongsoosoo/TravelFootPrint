@@ -1,32 +1,42 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Button from '../../Component/Button/Button';
 import S from './Home.styled';
 
 function Home() {
+  const history = useHistory();
+  const handleLink = () => {
+    history.push('/select/food');
+  };
   return (
     <S.HomeWrapper>
-      <S.HomeTitleBox>
-        <S.HomeTitleTitle>Dong + Soo Project</S.HomeTitleTitle>
-      </S.HomeTitleBox>
+      <S.HomeIconBox>
+        <S.HomeIconIcon />
+      </S.HomeIconBox>
       <S.HomeHookBox>
-        <S.HomeHookContent>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat
-          pretium nibh ipsum consequat nisl vel pretium lectus. Orci a
-          scelerisque purus semper eget duis. Dolor sit amet consectetur
-          adipiscing elit. Viverra tellus in hac habitasse platea dictumst
-          vestibulum. Aliquam malesuada bibendum arcu vitae elementum curabitur
-          vitae.
-        </S.HomeHookContent>
+        <p>
+          코로나 때문에 밖으로 나가지도 못하고, 집 콕 중에 배달 음식을 시켜
+          드셨나요?
+        </p>
+
+        <br />
+        <p>
+          배달 음식에 사용 되는 일회용 용기들은 탄소 배출의 원인이 되기도
+          합니다.
+        </p>
+        <br />
+        <p>
+          오늘 배달 음식을 먹으며 사용한 일회용 용기들을 입력하여 탄소발자국을
+          계산해 봅시다!
+        </p>
       </S.HomeHookBox>
-      <S.HomeBottomBox>
-        <Link style={{ width: '40%', height: '40%' }} to="/select/food">
-          <Button width={100} height={100}>
-            Start
-          </Button>
-        </Link>
-      </S.HomeBottomBox>
+      <S.HomeBtnBox>
+        <Button width={390} height={50} onClick={handleLink}>
+          <p style={{ fontSize: '32px', fontWeight: 800, margin: 0 }}>
+            계산하기
+          </p>
+        </Button>
+      </S.HomeBtnBox>
     </S.HomeWrapper>
   );
 }

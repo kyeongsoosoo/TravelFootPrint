@@ -11,21 +11,20 @@ interface IFMcontent {
 
 function FMcontent({ selectedC }: IFMcontent) {
   const list = useSelector((state: RootState) => state.food);
-  const [getPlus, getMinus] = useSavingCounter(selectedC.name);
+  const [getPlus, getMinus] = useSavingCounter(
+    selectedC.name,
+    selectedC.weight,
+  );
 
   return (
     <S.FMcontentWrapper>
       <S.FMcontentPhoto>{selectedC.name}</S.FMcontentPhoto>
       <S.FMcontentCalWrapper>
-        <S.FMcontentCalMinusBtn onClick={() => getMinus()}>
-          -
-        </S.FMcontentCalMinusBtn>
+        <S.FMcontentBtn onClick={getMinus}>-</S.FMcontentBtn>
         <S.FMcontentCalShowWrapper>
-          {list[selectedC.name] ? list[selectedC.name] : 0}
+          {list[selectedC.name] ? list[selectedC.name].count : 0}
         </S.FMcontentCalShowWrapper>
-        <S.FMcontentCalPlusBtn onClick={() => getPlus()}>
-          +
-        </S.FMcontentCalPlusBtn>
+        <S.FMcontentBtn onClick={getPlus}>+</S.FMcontentBtn>
       </S.FMcontentCalWrapper>
     </S.FMcontentWrapper>
   );

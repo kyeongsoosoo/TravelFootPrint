@@ -5,8 +5,11 @@ const FMWrapper = styled.main`
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 20%;
-  overflow-y: scroll;
+  grid-auto-rows: 120px;
+  gap: 0 8px;
+  background-color: white;
+  border-top: 1px solid black;
+  border-radius: 10px;
 `;
 
 const FMcontentWrapper = styled.div`

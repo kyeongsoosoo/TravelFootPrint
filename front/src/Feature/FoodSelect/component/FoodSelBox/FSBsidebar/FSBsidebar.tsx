@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import S from './FSBsidebar.styled';
-import FoodList from '../../../Food.json';
+import FoodList from '../../../../../Food.json';
 
 interface IFSBsiderbar {
   foodList: number[];

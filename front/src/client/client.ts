@@ -1,10 +1,6 @@
 import axios from 'axios';
 import { CLIENT_ID, CLIENT_SECRET } from '../../../naverKey';
-
-interface IDriving {
-  start: [x: string, y: string];
-  goal: [x: string, y: string];
-}
+import { IDriving } from '../lib/types';
 
 const getGeoCode = async (payload: string) => {
   const response = await axios.get('/api/map/geocoding', {

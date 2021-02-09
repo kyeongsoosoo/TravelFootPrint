@@ -1,0 +1,10 @@
+[
+  {
+    "type": "car",
+    "cost": "210"
+  },
+  {
+    "type": "motorcycle",
+    "cost": "145"
+  }
+]
