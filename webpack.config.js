@@ -1,5 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
+const dotenv = require('dotenv');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+dotenv.config();
 
 module.exports = {
   entry: './front/src/index.tsx',
@@ -64,7 +68,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.join(__dirname, 'front/public/'),
+    contentBase: path.join(__dirname, 'front/src/'),
     port: 3000,
     publicPath: 'http://locallhost:3000/dist/',
     hot: true,
@@ -75,5 +79,16 @@ module.exports = {
       },
     },
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './front/src/index.html',
+      filename: 'index.html',
+      templateParameters: {
+        env: JSON.stringify(process.env.KAKAO_APPKEY),
+        title: 'Hi',
+      },
+      inject: false,
+    }),
+  ],
 };

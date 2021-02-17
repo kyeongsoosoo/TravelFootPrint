@@ -5,3 +5,5 @@ naverKey.ts
 backends/config/dev.js
 
 .DS_STORE
+
+.env

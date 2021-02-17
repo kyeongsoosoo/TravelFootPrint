@@ -8,7 +8,7 @@ const HomeWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 120%;
+  height: 70vh;
 `;
 
 const HomeIconBox = styled.section`

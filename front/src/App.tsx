@@ -6,6 +6,8 @@ import FoodSelect from './Feature/FoodSelect/FoodSelect';
 import Distance from './Feature/DistanceSelect/Distance';
 import TransSelect from './Feature/TransSelect/TransSelect';
 import SemiResult from './Feature/SemiResult/SemiResult';
+import OffsetSelect from './Feature/OffsetSelect/OffsetSelect';
+import FinalResult from './Feature/FinalResult/FinalResult';
 
 function App() {
   const history = useHistory();
@@ -25,7 +27,9 @@ function App() {
           <Route path="/select/food" exact component={FoodSelect} />
           <Route path="/select/distance" exact component={Distance} />
           <Route path="/select/transport" exact component={TransSelect} />
+          <Route path="/select/offset" exact component={OffsetSelect} />
           <Route path="/result/semi" exact component={SemiResult} />
+          <Route path="/result/final" exact component={FinalResult} />
           <Route path="/" exact component={Home} />
         </Switch>
       </S.AppMain>

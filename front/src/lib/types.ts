@@ -14,8 +14,18 @@ export enum LocationType {
 }
 
 export interface IDriving {
-  start: string;
-  goal: string;
+  start: string[];
+  goal: string[];
 }
 
 export type TtransportType = 'motorcycle' | 'walk/Bike';
+
+export interface IOffset {
+  offsetWay: string;
+  idx: number;
+  detail: {
+    description: string;
+    assumption: string;
+    weight: number;
+  };
+}

@@ -1,39 +1,33 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { flexCenter } from '../../../../../lib/css/mixin';
 
-const RdBoxInpWrapper = styled.div`
-  display: flex;
-  width: 200px;
-  height: 15%;
-`;
+type TRdBoxInpWrapper = {
+  isSelected: boolean;
+};
 
-const RdBoxInpBtnWrapper = styled.div`
+const RdBoxInpWrapper = styled.div<TRdBoxInpWrapper>`
   ${flexCenter}
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  border: 1px solid black;
-  background-color: white;
-`;
-
-const RdBoxInpChoosedBtn = styled.div`
-  width: 30px;
-  height: 30px;
+  width: 80%;
+  height: 25%;
+  background-color: ${({ isSelected }) =>
+    isSelected
+      ? css`
+          ${props => props.theme.mainColor}
+        `
+      : 'white'};
   border-radius: 15px;
-  background-color: ${props => props.theme.mainColor};
+  cursor: pointer;
+  & + & {
+    margin-top: 5%;
+  }
 `;
 
 const RdBoxInpText = styled.div`
-  display: flex;
-  align-items: center;
-  width: 160px;
-  height: 30px;
-  font-size: 20px;
+  font-size: 32px;
+  font-weight: 800;
 `;
 
 export default {
   RdBoxInpWrapper,
-  RdBoxInpBtnWrapper,
-  RdBoxInpChoosedBtn,
   RdBoxInpText,
 };

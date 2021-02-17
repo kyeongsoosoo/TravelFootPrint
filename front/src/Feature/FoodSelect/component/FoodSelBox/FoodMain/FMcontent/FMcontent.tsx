@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useSavingCounter } from '../../../../../../hook/useSavingCounter';
+import SelectBox from '../../../../../../Component/SelectBox/SelectBox';
+import { useFoodCounter } from '../../../../../../hook/useFoodCounter';
+
 import { ISelectedContainer } from '../../../../../../lib/types';
 import { RootState } from '../../../../../../redux';
 import S from './FMcontent.styled';
@@ -11,7 +13,7 @@ interface IFMcontent {
 
 function FMcontent({ selectedC }: IFMcontent) {
   const list = useSelector((state: RootState) => state.food);
-  const [getPlus, getMinus] = useSavingCounter(
+  const [setFoodPlus, setFoodMinus] = useFoodCounter(
     selectedC.name,
     selectedC.weight,
   );
@@ -19,13 +21,11 @@ function FMcontent({ selectedC }: IFMcontent) {
   return (
     <S.FMcontentWrapper>
       <S.FMcontentPhoto>{selectedC.name}</S.FMcontentPhoto>
-      <S.FMcontentCalWrapper>
-        <S.FMcontentBtn onClick={getMinus}>-</S.FMcontentBtn>
-        <S.FMcontentCalShowWrapper>
-          {list[selectedC.name] ? list[selectedC.name].count : 0}
-        </S.FMcontentCalShowWrapper>
-        <S.FMcontentBtn onClick={getPlus}>+</S.FMcontentBtn>
-      </S.FMcontentCalWrapper>
+      <SelectBox
+        minusClick={setFoodMinus}
+        plusClick={setFoodPlus}
+        count={list[selectedC.name] ? list[selectedC.name].count : 0}
+      />
     </S.FMcontentWrapper>
   );
 }

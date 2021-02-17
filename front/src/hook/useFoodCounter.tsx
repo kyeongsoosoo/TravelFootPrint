@@ -1,14 +1,14 @@
 import { useDispatch } from 'react-redux';
 import { minusCount, plusCount } from '../redux/food/action';
 
-export function useSavingCounter(name: string, weight: number) {
+export function useFoodCounter(name: string, weight: number) {
   const dispatch = useDispatch();
-  const getPlus = () => {
+  const setFoodPlus = () => {
     dispatch(plusCount({ name, weight }));
   };
-  const getMinus = () => {
+  const setFoodMinus = () => {
     dispatch(minusCount({ name, weight }));
   };
 
-  return [getPlus, getMinus];
+  return [setFoodPlus, setFoodMinus];
 }

@@ -1,15 +1,15 @@
 module.exports = {
-  singleQuote: true,
+    singleQuote: true,
 
-  semi: true,
+    semi: true,
 
-  useTabs: false,
+    useTabs: false,
 
-  tabWidth: 4,
+    tabWidth: 2,
 
-  trailingComma: 'all',
+    trailingComma: 'all',
 
-  printWidth: 80,
+    printWidth: 80,
 
-  arrowParens: 'avoid',
+    arrowParens: 'avoid',
 };

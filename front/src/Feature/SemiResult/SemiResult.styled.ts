@@ -6,7 +6,7 @@ const SemiResultWrapper = styled.main`
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  height: 100%;
+  height: 70vh;
   padding: 10% 0;
 `;
 

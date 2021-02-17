@@ -4,15 +4,15 @@ import HeaderIcon from './lib/image/header.svg';
 
 const AppWrapper = styled.div`
   width: 100%;
-  height: 100%;
-  ${flexCenter};
+  min-height: 100%;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const AppHeader = styled.header`
   width: 100%;
-  height: 20%;
+  height: 20vh;
   background-image: url(${HeaderIcon});
   background-repeat: no-repeat;
   background-position: center;
@@ -20,13 +20,17 @@ const AppHeader = styled.header`
 `;
 
 const AppMain = styled.main`
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
   width: 100%;
-  height: 70%;
+  min-height: 70vh;
 `;
 
 const AppFooter = styled.footer`
+  display: block;
   width: 100%;
-  height: 10%;
+  height: 10vh;
   text-align: center;
   color: #a4a4a3;
 `;

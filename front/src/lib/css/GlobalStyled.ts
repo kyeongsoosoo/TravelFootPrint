@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         opacity: 0.9;
         width: 100%;
-        height: 100%;
+        min-height: 100%;
     }
 
     main{
@@ -36,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     input,button {
         outline: none;
         border: none;
+        box-sizing: border-box;
     }
     
 `;

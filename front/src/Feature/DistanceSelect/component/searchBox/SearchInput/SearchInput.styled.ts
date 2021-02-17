@@ -1,29 +1,33 @@
+import { BiSearchAlt2 } from 'react-icons/bi';
+import { BsSearch } from 'react-icons/bs';
 import styled from 'styled-components';
 import { flexCenter } from '../../../../../lib/css/mixin';
 
+const SearchTableWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+`;
+
 const SearchInputWrapper = styled.div`
   ${flexCenter}
-  width: 100%;
-  height: 20%;
-  margin-bottom: 5%;
+  flex-direction: column;
+  width: 70%;
 `;
 
 const SearchInputInp = styled.input`
   display: block;
-  width: 400px;
-  height: 100%;
-  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background-color: ${props => props.theme.middleColor};
 
-  &::placeholder {
+  & {
     padding-left: 20px;
     font-size: 24px;
   }
-`;
-
-const SearchInputDaumBox = styled.div`
-  width: 400px;
-  height: 100%;
 `;
 
 const SearchInputResult = styled.div`
@@ -38,9 +42,20 @@ const SearchInputResult = styled.div`
   font-size: 24px;
 `;
 
+const SearchSubmitBtn = styled(BiSearchAlt2)`
+  width: 50px;
+  height: 50px;
+  background-color: ${props => props.theme.mainColor};
+
+  color: white;
+  margin-left: 10px;
+  border-radius: 10px;
+`;
+
 export default {
+  SearchTableWrapper,
   SearchInputWrapper,
   SearchInputInp,
   SearchInputResult,
-  SearchInputDaumBox,
+  SearchSubmitBtn,
 };

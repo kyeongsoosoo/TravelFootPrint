@@ -8,11 +8,14 @@ interface IRdBoxInp {
 
 function RdBoxInp(props: IRdBoxInp) {
   return (
-    <S.RdBoxInpWrapper>
-      <S.RdBoxInpBtnWrapper className="radio-inp" id={props.id}>
-        {props.isSelected && <S.RdBoxInpChoosedBtn />}
-      </S.RdBoxInpBtnWrapper>
-      <S.RdBoxInpText>{props.id}</S.RdBoxInpText>
+    <S.RdBoxInpWrapper
+      isSelected={props.isSelected}
+      id={props.id}
+      className={'radio-inp'}
+    >
+      <S.RdBoxInpText id={props.id} className={'radio-inp'}>
+        {props.id}
+      </S.RdBoxInpText>
     </S.RdBoxInpWrapper>
   );
 }
