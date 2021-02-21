@@ -59,7 +59,7 @@ module.exports = {
   },
   resolve: { extensions: ['*', '.js', '.jsx', '.ts', '.tsx', '.svg'] },
   output: {
-    path: path.resolve(__dirname, 'front/dist/'),
+    path: path.resolve(__dirname, 'dist/'),
     publicPath: '/dist/',
     filename: 'bundle.js',
   },
