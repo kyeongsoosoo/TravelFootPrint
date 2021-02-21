@@ -5,11 +5,12 @@ interface ISelectBox {
   plusClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   minusClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   count: number;
+  width: number;
 }
 
 function SelectBox(props: ISelectBox) {
   return (
-    <S.SelectBoxWrapper>
+    <S.SelectBoxWrapper width={props.width}>
       <S.SelectBoxBtn onClick={props.minusClick}>-</S.SelectBoxBtn>
       <S.SelectBoxResultWrapper>{props.count}</S.SelectBoxResultWrapper>
       <S.SelectBoxBtn onClick={props.plusClick}>+</S.SelectBoxBtn>

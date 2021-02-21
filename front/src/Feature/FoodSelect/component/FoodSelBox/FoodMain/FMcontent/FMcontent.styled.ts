@@ -3,7 +3,9 @@ import { flexCenter } from '../../../../../../lib/css/mixin';
 
 const FMcontentWrapper = styled.div`
   width: 100%;
-  height: 120px;
+  height: 80%;
+  ${props => props.theme.smallFont}
+  font-weight: 500;
 `;
 
 const FMcontentPhoto = styled.div`

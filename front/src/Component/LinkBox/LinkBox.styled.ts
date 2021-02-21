@@ -4,7 +4,9 @@ const LinkBoxWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   width: 70%;
-  height: 10%;
+  max-width: 900px;
+  height: 5vh;
+  ${props => props.theme.btnFont};
 `;
 
 export default {

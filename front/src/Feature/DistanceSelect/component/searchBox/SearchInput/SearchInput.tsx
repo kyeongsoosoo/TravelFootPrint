@@ -3,10 +3,7 @@ import { LocationType } from '../../../../../lib/types';
 
 import S from './SearchInput.styled';
 
-import { useDispatch, useSelector } from 'react-redux';
-
 import SearchBoxResult from '../SearchResultBox/SearchBoxResult';
-import { RootState } from '../../../../../redux';
 
 interface ISearchInput {
   type: LocationType;
@@ -46,9 +43,22 @@ function SearchInput(props: ISearchInput) {
           <S.SearchInputInp
             placeholder={address || placeholderContent}
             onChange={handleInput}
+            onClick={() => {
+              setValue('');
+              setAddr('');
+            }}
             value={value}
           ></S.SearchInputInp>
-          {isOpen && <SearchBoxResult type={props.type} searchKey={address} />}
+          {isOpen && (
+            <SearchBoxResult
+              type={props.type}
+              searchKey={address}
+              setInput={val => {
+                setOpen(!open);
+                setValue(val);
+              }}
+            />
+          )}
         </>
       </S.SearchInputWrapper>
       <S.SearchSubmitBtn />

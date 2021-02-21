@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import S from './FoodSelect.styled';
 import FoodSelBox from './component/FoodSelBox/FoodSelBox';
 
 import LinkBox from '../../Component/LinkBox/LinkBox';

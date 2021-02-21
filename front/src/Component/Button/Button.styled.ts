@@ -10,8 +10,7 @@ const ButtonWrapper = styled.button<IButtonWrapper>`
   height: ${({ height }) => `${height}%`};
   background-color: ${props => props.theme.mainColor};
   border-radius: 20px;
-  font-size: 24px;
-  font-weight: 600;
+  ${props => props.theme.btnFont}
   cursor: pointer;
 `;
 

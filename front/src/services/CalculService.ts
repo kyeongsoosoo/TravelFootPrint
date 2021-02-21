@@ -1,5 +1,6 @@
 import { DISTANCE_STATE } from '../redux/distance/distance';
 import { FOOD_STATE } from '../redux/food/food';
+import { OFFSET_STATE } from '../redux/offset/offset';
 
 type FoodEntry = [
   string,
@@ -13,12 +14,21 @@ interface ITotalProp {
   getTotal: () => number;
 }
 
+export class OffsetTotalService implements ITotalProp {
+  constructor(private offsetList: OFFSET_STATE) {}
+
+  getTotal() {
+    const FoodEntry = getListEntry(this.offsetList);
+    return getListTotal(FoodEntry);
+  }
+}
+
 export class FoodTotalService implements ITotalProp {
   constructor(private foodList: FOOD_STATE) {}
 
   getTotal() {
-    const FoodEntry = getFoodEntry(this.foodList);
-    return getFoodTotal(FoodEntry);
+    const FoodEntry = getListEntry(this.foodList);
+    return getListTotal(FoodEntry);
   }
 }
 
@@ -30,11 +40,11 @@ export class DistanceTotalService implements ITotalProp {
   }
 }
 
-function getFoodEntry(foodList: FOOD_STATE) {
+function getListEntry(foodList: FOOD_STATE) {
   return Object.entries(foodList);
 }
 
-function getFoodTotal(foodList: FoodEntry) {
+function getListTotal(foodList: FoodEntry) {
   const totalResult = foodList.reduce((acc, cur) => {
     return (acc += cur[1].count * cur[1].weight);
   }, 0);

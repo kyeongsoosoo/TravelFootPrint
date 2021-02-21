@@ -16,8 +16,8 @@ const FSBSiderbarContent = styled.article<IFSBsidebarContentProp>`
   ${flexCenter}
   width: 80%;
   height: 15%;
-  background-color: ${({ isClicked }) => (isClicked ? `white` : 'inherit')};
-  border: 2px solid black;
+  ${props => props.theme.middleFont}
+  background-color: ${({ isClicked }) => (isClicked ? `green` : 'white')};
   border-radius: 5px;
   cursor: pointer;
   & + & {

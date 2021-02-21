@@ -3,8 +3,8 @@ import { flexCenter } from './lib/css/mixin';
 import HeaderIcon from './lib/image/header.svg';
 
 const AppWrapper = styled.div`
-  width: 100%;
-  min-height: 100%;
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -24,15 +24,17 @@ const AppMain = styled.main`
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
-  min-height: 70vh;
+  min-height: 65vh;
 `;
 
 const AppFooter = styled.footer`
-  display: block;
+  ${flexCenter}
+  flex-direction: column;
   width: 100%;
-  height: 10vh;
+  height: 15vh;
   text-align: center;
   color: #a4a4a3;
+  border-top: 1px solid gray;
 `;
 
 export default { AppWrapper, AppHeader, AppMain, AppFooter };

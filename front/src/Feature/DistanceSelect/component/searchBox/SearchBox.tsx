@@ -7,6 +7,7 @@ function SearchBox() {
   return (
     <S.SearchBoxWrapper>
       <SearchInput type={LocationType.departure} />
+      <SearchInput type={LocationType.arrival} />
     </S.SearchBoxWrapper>
   );
 }

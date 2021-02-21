@@ -8,7 +8,7 @@ const HomeWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 70vh;
+  height: 85vh;
 `;
 
 const HomeIconBox = styled.section`
@@ -29,17 +29,18 @@ const HomeIconIcon = styled.div`
 const HomeHookBox = styled.section`
   ${flexCenter}
   flex-direction: column;
-  width: 390px;
+  width: 60vw;
+  max-width: 500px;
   height: 20%;
-  font-weight: 500;
-  font-size: 22px;
+  ${props => props.theme.smallFont}
   letter-spacing: 0.2px;
   line-height: 1.3;
+  margin: 20px 0px;
 `;
 
 const HomeBtnBox = styled.section`
   height: 20%;
-  width: 100%;
+  width: 50%;
   ${flexCenter}
 `;
 

@@ -22,6 +22,7 @@ function FMcontent({ selectedC }: IFMcontent) {
     <S.FMcontentWrapper>
       <S.FMcontentPhoto>{selectedC.name}</S.FMcontentPhoto>
       <SelectBox
+        width={100}
         minusClick={setFoodMinus}
         plusClick={setFoodPlus}
         count={list[selectedC.name] ? list[selectedC.name].count : 0}

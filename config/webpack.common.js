@@ -1,14 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
-const dotenv = require('dotenv');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-dotenv.config();
 
 module.exports = {
   entry: './front/src/index.tsx',
-  mode: 'development',
-  devtool: 'inline-source-map',
+
   module: {
     rules: [
       {
@@ -67,18 +63,7 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'bundle.js',
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'front/src/'),
-    port: 3000,
-    publicPath: 'http://locallhost:3000/dist/',
-    hot: true,
-    historyApiFallback: true,
-    proxy: {
-      '/api/': {
-        target: 'http://localhost:5000',
-      },
-    },
-  },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
@@ -86,7 +71,6 @@ module.exports = {
       filename: 'index.html',
       templateParameters: {
         env: JSON.stringify(process.env.KAKAO_APPKEY),
-        title: 'Hi',
       },
       inject: false,
     }),

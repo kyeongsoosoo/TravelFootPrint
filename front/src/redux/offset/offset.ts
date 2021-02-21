@@ -10,6 +10,7 @@ export type OFFSET_STATE = {
   [boxoffsetWay: string]: {
     count: number;
     weight: number;
+    description: string;
   };
 };
 
@@ -22,12 +23,14 @@ export const offset = createReducer<OFFSET_STATE, OFFSET_ACTION>(initialState, {
       `${action.payload.offsetWay}`,
     )
       ? {
+          description: action.payload.detail.description,
           count: state[action.payload.offsetWay].count + 1,
           weight:
             state[action.payload.offsetWay].weight +
             action.payload.detail.weight,
         }
       : {
+          description: action.payload.detail.description,
           count: 1,
           weight: action.payload.detail.weight,
         },
@@ -38,12 +41,14 @@ export const offset = createReducer<OFFSET_STATE, OFFSET_ACTION>(initialState, {
       state.hasOwnProperty(`${action.payload.offsetWay}`) &&
       state[action.payload.offsetWay].count > 0
         ? {
+            description: action.payload.detail.description,
             count: state[action.payload.offsetWay].count - 1,
             weight:
               state[action.payload.offsetWay].weight -
               action.payload.detail.weight,
           }
         : {
+            description: action.payload.detail.description,
             count: 0,
             weight: 0,
           },

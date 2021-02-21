@@ -7,26 +7,34 @@ type TierType = {
 
 interface ITierService {
   TierList: TierType[];
-  getTier: () => TierType;
 }
 
-class TierService implements ITierService {
+export class TierService implements ITierService {
   TierList: TierType[];
-  private Tier;
+  private Tier: TierType;
 
   constructor(private totalSum: number) {
     this.TierList = TierListJson;
+    this.Tier = getTier(this.totalSum, this.TierList);
   }
 
   getTier() {
-    this.TierList.some(item => {
-      const startWith = item.range[0];
-      const endWith = item.range[1];
-      if (this.totalSum >= startWith && this.totalSum <= endWith) {
-        this.Tier = item.place;
-        return true;
-      }
-    });
     return this.Tier;
   }
+}
+
+function getTier(totalSum: number, TierList: TierType[]) {
+  let tier: TierType = {
+    range: [0, 2000],
+    place: '노벨 광장',
+  };
+  TierList.some(item => {
+    const startWith = item.range[0];
+    const endWith = item.range[1];
+    if (totalSum >= startWith && totalSum <= endWith) {
+      tier = item;
+      return true;
+    }
+  });
+  return tier;
 }

@@ -15,9 +15,14 @@ import S from './SearchResultBox.styled';
 type TSearchBoxResult = {
   searchKey: string | undefined;
   type: LocationType;
+  setInput: (val) => void;
 };
 
-function SearchBoxResult({ searchKey = '안암', type }: TSearchBoxResult) {
+function SearchBoxResult({
+  setInput,
+  searchKey = '안암',
+  type,
+}: TSearchBoxResult) {
   const PS = PlaceService();
 
   const dispatch = useDispatch();
@@ -39,11 +44,17 @@ function SearchBoxResult({ searchKey = '안암', type }: TSearchBoxResult) {
       const handleItemClick = () => {
         if (type == 0) dispatch(departureCord({ x: item.x, y: item.y }));
         else dispatch(arriveCord({ x: item.x, y: item.y }));
+        setInput(item.place_name);
       };
+
       return (
         <S.SearchResultItemWrapper key={item.id} onClick={handleItemClick}>
           <S.SRItextBox>
-            <S.SRItextPlaceName>{item.place_name}</S.SRItextPlaceName>
+            <S.SRItextPlaceName
+              overSize={item.place_name.length > 10 ? true : false}
+            >
+              {item.place_name}
+            </S.SRItextPlaceName>
             <S.SRItextAddressName>{item.address_name}</S.SRItextAddressName>
           </S.SRItextBox>
         </S.SearchResultItemWrapper>

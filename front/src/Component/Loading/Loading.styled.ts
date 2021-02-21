@@ -6,15 +6,15 @@ const LoadingWrapper = styled.div`
   ${flexCenter}
   flex-direction: column;
   justify-content: space-around;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 70vh;
   padding 15% 0;
 `;
 
 const LoadingSpinner = styled(FaSpinner)`
   font-size: 64px;
   animation: spin 1s linear infinite;
-
+  color: ${props => props.theme.mainColor};
   @keyframes spin {
     from {
       transform: rotate(0deg);
@@ -41,7 +41,7 @@ const LoadingText = styled.h1`
 const LoadingTextBox = styled.div`
   ${flexCenter}
   text-align: center;
-  font-size: 24px;
+  ${props => props.theme.middleSize}
   font-weight: 600;
   width: 100%;
   height: 80%;

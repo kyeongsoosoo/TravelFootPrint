@@ -5,10 +5,10 @@ const FMWrapper = styled.main`
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 120px;
+  grid-auto-rows: 12vh;
   gap: 0 8px;
   background-color: white;
-  border-top: 1px solid black;
+
   border-radius: 10px;
 `;
 

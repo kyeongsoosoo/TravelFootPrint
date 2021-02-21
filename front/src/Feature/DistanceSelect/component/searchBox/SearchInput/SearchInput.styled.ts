@@ -1,12 +1,12 @@
 import { BiSearchAlt2 } from 'react-icons/bi';
-import { BsSearch } from 'react-icons/bs';
 import styled from 'styled-components';
 import { flexCenter } from '../../../../../lib/css/mixin';
 
 const SearchTableWrapper = styled.div`
   display: flex;
   justify-content: center;
-
+  align-items: flex-start;
+  height: 30%;
   width: 100%;
 `;
 
@@ -14,12 +14,13 @@ const SearchInputWrapper = styled.div`
   ${flexCenter}
   flex-direction: column;
   width: 70%;
+  max-width: 700px;
 `;
 
 const SearchInputInp = styled.input`
   display: block;
   width: 100%;
-  height: 50px;
+  height: 70px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-color: ${props => props.theme.middleColor};
@@ -30,21 +31,9 @@ const SearchInputInp = styled.input`
   }
 `;
 
-const SearchInputResult = styled.div`
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-  width: 400px;
-  height: 100%;
-  border-radius: 5px;
-  background-color: white;
-  font-weight: 600;
-  font-size: 24px;
-`;
-
 const SearchSubmitBtn = styled(BiSearchAlt2)`
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 70px;
   background-color: ${props => props.theme.mainColor};
 
   color: white;
@@ -56,6 +45,5 @@ export default {
   SearchTableWrapper,
   SearchInputWrapper,
   SearchInputInp,
-  SearchInputResult,
   SearchSubmitBtn,
 };

@@ -16,12 +16,12 @@ const OffsetSelectBox = styled.div`
 
 const OffsetItemWrapper = styled.div`
   display: flex;
-  width: 80%;
+  width: 90%;
   height: 15%;
 `;
 
 const OffsetItemTextWrapper = styled.div`
-  width: 70%;
+  width: 80%;
   height: 100%;
 `;
 

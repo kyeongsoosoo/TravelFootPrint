@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "backend": "nodemon backends/index.js",
-    "start": "webpack serve --open --hot  --history-api-fallback",
+    "start": "webpack serve --mode development --open --hot  --history-api-fallback --config config/webpack.dev.js",
     "both": "concurrently \"npm run backend\" \"npm run start\"",
-    "build": "webpack"
+    "build": "webpack --mode production --config config/webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -30,8 +30,10 @@
     "eslint-plugin-react": "^7.22.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
     "prettier": "^2.2.1",
     "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.15.0",
     "webpack-cli": "^4.3.1",

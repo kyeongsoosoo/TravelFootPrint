@@ -5,7 +5,7 @@ const FSBoxWrapper = styled.div`
   align-items: center;
   width: 80%;
   max-width: 700px;
-  height: 70%;
+  height: 60vh;
 `;
 
 const FSBoxSidebarWrapper = styled.aside`
