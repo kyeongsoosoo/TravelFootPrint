@@ -3,7 +3,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 const common = require('./webpack.common');
 const TerserPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const config = {
   mode: 'production',
@@ -17,7 +16,6 @@ const config = {
           },
         },
       }),
-      new OptimizeCSSAssetsPlugin(),
     ],
   },
   plugins: [new CleanWebpackPlugin()],
