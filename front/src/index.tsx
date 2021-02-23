@@ -8,7 +8,8 @@ import createSagaMiddleware from 'redux-saga';
 import { ThemeProvider } from 'styled-components';
 import App from './App';
 import { GlobalStyle } from './lib/css/GlobalStyled';
-import theme from './lib/css/theme';
+import theme from './lib/css/Theme';
+
 import { rootReducer } from './redux';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -17,8 +18,6 @@ const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(sagaMiddleware)),
 );
-
-// sagaMiddleware.run()
 
 render(
   <Provider store={store}>

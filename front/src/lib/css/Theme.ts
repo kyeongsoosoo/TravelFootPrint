@@ -1,5 +1,7 @@
 import { fontSizing } from './mixin';
 
+const a = 'test';
+
 const theme = {
   clickedColor: '#415922',
   mainColor: '#8ED04C',
