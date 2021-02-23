@@ -59,8 +59,7 @@ module.exports = {
   },
   resolve: { extensions: ['*', '.js', '.jsx', '.ts', '.tsx', '.svg'] },
   output: {
-    path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, '../front/dist/'),
     filename: 'bundle.js',
   },
 
@@ -70,9 +69,9 @@ module.exports = {
       template: './front/src/index.html',
       filename: 'index.html',
       templateParameters: {
+        title: 'CarbProject',
         env: JSON.stringify(process.env.KAKAO_APPKEY),
       },
-      inject: false,
     }),
   ],
 };
