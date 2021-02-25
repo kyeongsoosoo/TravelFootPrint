@@ -3,9 +3,6 @@ node_modules
 backends/config/key.js
 backends/config/dev.js
 
-.aws
-.ebextensions
-
 .DS_STORE
 
 .env
