@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { CLIENT_ID, CLIENT_SECRET } from '../../../naverKey';
 import { IDriving } from '../lib/types';
 
 const getGeoCode = async (payload: string) => {
@@ -13,8 +12,8 @@ const getGeoCode = async (payload: string) => {
 const getDriving = async (payload: IDriving) => {
   const response = await axios.get('/api/map/driving', {
     params: {
-      start: payload.start,
-      goal: payload.goal,
+      start: `${payload.start.x},${payload.start.y}`,
+      goal: `${payload.goal.x},${payload.goal.y}`,
     },
   });
   return response.data;

@@ -4,7 +4,7 @@ const router = express.Router();
 
 const request = require('request');
 
-const config = require('../config/dev');
+const config = require('../config/key');
 
 const options = coord => {
   return {
@@ -39,7 +39,6 @@ router.get('/driving', (req, res) => {
   const driveOption = driveOptions(req.query.start, req.query.goal);
   request.get(driveOption, (error, response, body) => {
     const data = JSON.parse(body);
-    console.log(data);
     return res.status(200).json(data);
   });
 });

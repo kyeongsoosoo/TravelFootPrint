@@ -4,8 +4,8 @@ import { ICord } from '../lib/types';
 class NaverMapService {
   async getNavi(departureCord: ICord, arrivalCord: ICord) {
     const naviInfo = await mapClient.getDriving({
-      start: [departureCord.x, departureCord.y],
-      goal: [arrivalCord.x, arrivalCord.y],
+      start: { x: departureCord.x, y: departureCord.y },
+      goal: { x: arrivalCord.x, y: arrivalCord.y },
     });
     return naviInfo.route.traoptimal[0].summary;
   }

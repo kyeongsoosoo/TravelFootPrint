@@ -12,6 +12,7 @@ import {
   DistanceTotalService,
   FoodTotalService,
 } from '../../services/CalculService';
+import NaverMapService from '../../services/NaverMapService';
 import RdBox from './component/RadioBox/RdBox';
 import S from './TransSelect.styled';
 
@@ -22,9 +23,15 @@ function TransSelect() {
   const dispatch = useDispatch();
 
   const handleToSemiClick = async () => {
+    if (!distanceList.departure || !distanceList.arrival) return;
     const FoodTotal = new FoodTotalService(foodList).getTotal();
-    const DistanceTotal = new DistanceTotalService(distanceList).getTotal();
-    const total = FoodTotal + DistanceTotal;
+    const summary = await NaverMapService.getNavi(
+      distanceList.departure,
+      distanceList.arrival,
+    );
+    const DistanceTotal = NaverMapService.getDistance(summary);
+    console.log(summary, DistanceTotal);
+    const total = FoodTotal + (DistanceTotal * 145) / 100;
     dispatch(setLoadingStart());
     setTimeout(() => {
       dispatch(setSemiTotal(total));
