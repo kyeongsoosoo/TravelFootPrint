@@ -1,11 +1,83 @@
 [
   {
-    "offsetWay": "Deleting Email",
+    "offsetWay": "이메일 삭제",
     "idx": 0,
     "detail": {
       "description": "데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.",
       "assumption": "단위는 통으로 하며 조회 여부는 상관 없습니다.",
       "weight": 45
+    }
+  },
+  {
+    "offsetWay": "이면지 사용",
+    "idx": 1,
+    "detail": {
+      "description": "데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.",
+      "assumption": "단위는 1장으로 합니다.",
+      "weight": 1.7
+    }
+  },
+  {
+    "offsetWay": "컵 홀더 사용 안하기",
+    "idx": 2,
+    "detail": {
+      "description": "데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.",
+      "assumption": "단위는 1개로 합니다.",
+      "weight": 6
+    }
+  },
+  {
+    "offsetWay": "버스 이용",
+    "idx": 3,
+    "detail": {
+      "description": "데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.",
+      "assumption": "1회 당 25km로 계산하며 승용차 대신 버스를 이용한 것을 의미합니다.",
+      "weight": 4560
+    }
+  },
+  {
+    "offsetWay": "지하철 이용",
+    "idx": 4,
+    "detail": {
+      "description": "데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.",
+      "assumption": "1회 당 25km로 계산하며 승용차 대신 지하철을 이용한 것을 의미합니다.",
+      "weight": 5212
+    }
+  },
+  {
+    "offsetWay": "채식",
+    "idx": 5,
+    "detail": {
+      "description": "데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.",
+      "assumption": "단위는 1끼로 하며 소고기 150g을 덜 섭취하는 것을 가정합니다.",
+      "weight": 2250
+    }
+  },
+  {
+    "offsetWay": "영상 스트리밍 끄기",
+    "idx": 6,
+    "detail": {
+      "description": "데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.",
+      "assumption": "단위는 1시간으로 하며 사용되는 데이터와 데이터관리, 전력을 고려합니다.",
+      "weight": 3200
+    }
+  },
+  {
+    "offsetWay": "형광등 끄기",
+    "idx": 7,
+    "detail": {
+      "description": "데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.",
+      "assumption": "단위는 1시간으로 합니다.",
+      "weight": 34
+    }
+  },
+  {
+    "offsetWay": "사용 안하는 컴퓨터 끄기",
+    "idx": 8,
+    "detail": {
+      "description": "데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.",
+      "assumption": "단위는 1시간으로 하며 모니터가 켜져 있는 PC컴퓨터로 계산 됩니다.",
+      "weight": 90
     }
   }
 ]

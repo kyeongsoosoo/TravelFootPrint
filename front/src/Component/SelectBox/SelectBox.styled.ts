@@ -3,6 +3,7 @@ import { flexCenter } from '../../lib/css/mixin';
 
 type SelectBoxWrapperType = {
   width: number;
+  height: number;
 };
 
 const SelectBoxWrapper = styled.div<SelectBoxWrapperType>`
@@ -10,7 +11,7 @@ const SelectBoxWrapper = styled.div<SelectBoxWrapperType>`
   justify-content: space-around;
   align-items: center;
   width: ${({ width }) => `${width}%`};
-  height: 50%;
+  height: ${({ height }) => `${height}%`};
 `;
 
 const SelectBoxBtn = styled.button`

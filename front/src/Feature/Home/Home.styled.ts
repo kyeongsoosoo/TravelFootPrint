@@ -6,7 +6,7 @@ const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   height: 85vh;
 `;
@@ -14,7 +14,7 @@ const HomeWrapper = styled.div`
 const HomeIconBox = styled.section`
   ${flexCenter}
   width: 100%;
-  height: 40%;
+  height: 35vh;
 `;
 
 const HomeIconIcon = styled.div`
@@ -29,9 +29,9 @@ const HomeIconIcon = styled.div`
 const HomeHookBox = styled.section`
   ${flexCenter}
   flex-direction: column;
-  width: 60vw;
+  width: 70vw;
   max-width: 500px;
-  height: 20%;
+  height: 15vh;
   ${props => props.theme.smallFont}
   letter-spacing: 0.2px;
   line-height: 1.3;
@@ -39,7 +39,7 @@ const HomeHookBox = styled.section`
 `;
 
 const HomeBtnBox = styled.section`
-  height: 20%;
+  height: 15vh;
   width: 50%;
   ${flexCenter}
 `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const FSBoxWrapper = styled.div`
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 90vw;
   max-width: 700px;
   height: 60vh;
 `;

@@ -23,7 +23,8 @@ function OffsetSelectBox() {
             </S.OffsetItemTextDescript>
           </S.OffsetItemTextWrapper>
           <SelectBox
-            width={20}
+            width={30}
+            height={70}
             minusClick={() => setOffsetMinus(item)}
             plusClick={() => setOffsetPlus(item)}
             count={

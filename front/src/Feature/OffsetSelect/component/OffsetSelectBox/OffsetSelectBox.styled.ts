@@ -8,19 +8,28 @@ const OffsetSelectBoxWrapper = styled.main`
 `;
 
 const OffsetSelectBox = styled.div`
-  width: 70%;
-  height: 90%;
+  display: flex;
+  box-sizing: content-box;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5% 2%;
+  width: 70vw;
+  height: 46vh;
   border-radius: 25px;
   background-color: white;
+  overflow-y: scroll;
 `;
 
 const OffsetItemWrapper = styled.div`
   display: flex;
-  width: 90%;
-  height: 15%;
+  width: 65vw;
+  height: 10vh;
 `;
 
 const OffsetItemTextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 80%;
   height: 100%;
 `;

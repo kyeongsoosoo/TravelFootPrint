@@ -33,8 +33,8 @@ const AppFooter = styled.footer`
   width: 100%;
   height: 15vh;
   text-align: center;
-  color: #a4a4a3;
-  border-top: 1px solid gray;
+  background-color: ${props => props.theme.footerColor};
+  color: #ffffff;
 `;
 
 export default { AppWrapper, AppHeader, AppMain, AppFooter };
