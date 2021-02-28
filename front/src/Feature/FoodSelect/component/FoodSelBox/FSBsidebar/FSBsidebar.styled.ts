@@ -14,8 +14,8 @@ const FSBSdiebarWrapper = styled.section`
 
 const FSBSiderbarContent = styled.article<IFSBsidebarContentProp>`
   ${flexCenter}
-  width: 80%;
-  height: 15%;
+  width: 90%;
+  height: 20%;
   ${props => props.theme.middleFont}
   background-color: ${({ isClicked }) => (isClicked ? `green` : 'white')};
   border-radius: 5px;

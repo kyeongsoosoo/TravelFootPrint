@@ -14,7 +14,7 @@ function RdBoxInp(props: IRdBoxInp) {
       className={'radio-inp'}
     >
       <S.RdBoxInpText id={props.id} className={'radio-inp'}>
-        {props.id}
+        {props.id === 'motorcycle' ? '오토바이' : '걷기/자전거'}
       </S.RdBoxInpText>
     </S.RdBoxInpWrapper>
   );

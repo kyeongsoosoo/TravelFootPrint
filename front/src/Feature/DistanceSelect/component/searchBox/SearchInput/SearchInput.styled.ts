@@ -8,6 +8,9 @@ const SearchTableWrapper = styled.div`
   align-items: flex-start;
   height: 30%;
   width: 100%;
+  & + & {
+    margin-top: 3vh;
+  }
 `;
 
 const SearchInputWrapper = styled.div`

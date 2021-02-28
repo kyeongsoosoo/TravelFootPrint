@@ -13,7 +13,7 @@ const config = {
     historyApiFallback: true,
     proxy: {
       '/api/': {
-        target: 'http://localhost:80',
+        target: 'http://localhost:8081',
       },
     },
   },
