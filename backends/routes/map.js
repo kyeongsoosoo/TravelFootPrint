@@ -4,7 +4,7 @@ const router = express.Router();
 
 const request = require('request');
 
-const config = require('../config/key.js');
+const config = require('../config/key');
 
 const options = coord => {
   return {
