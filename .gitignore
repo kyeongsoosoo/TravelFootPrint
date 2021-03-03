@@ -1,6 +1,5 @@
 node_modules
 
-backends/config/key.js
 backends/config/dev.js
 
 .DS_STORE
