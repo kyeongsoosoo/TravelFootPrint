@@ -3,7 +3,7 @@ import { IDriving } from '../lib/types';
 
 const getGeoCode = async (payload: string) => {
   const response = await axios.get(
-    'http://travelprint.ap-northeast-2.elasticbeanstalk.com/api/map/geocoding',
+    'https://carb-miniserver.herokuapp.com/api/map/geocoding',
     {
       params: {
         cord: payload,
@@ -14,7 +14,7 @@ const getGeoCode = async (payload: string) => {
 };
 const getDriving = async (payload: IDriving) => {
   const response = await axios.get(
-    'http://travelprint.ap-northeast-2.elasticbeanstalk.com/api/map/driving',
+    'https://carb-miniserver.herokuapp.com/api/map/driving',
     {
       params: {
         start: `${payload.start.x},${payload.start.y}`,
