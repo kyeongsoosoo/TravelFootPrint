@@ -8,8 +8,7 @@
     "backend": "nodemon backends/index.js",
     "start": "node backends/index.js",
     "dev": "webpack serve --mode development --open --hot  --history-api-fallback --config config/webpack.dev.js",
-    "both": "concurrently \"npm run backend\" \"npm run dev\"",
-    "build": "webpack --mode production --config config/webpack.prod.js"
+    "both": "concurrently \"npm run backend\" \"npm run dev\""
   },
   "keywords": [],
   "author": "",
@@ -54,6 +53,7 @@
     "body-parser": "^1.19.0",
     "concurrently": "^5.3.0",
     "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
