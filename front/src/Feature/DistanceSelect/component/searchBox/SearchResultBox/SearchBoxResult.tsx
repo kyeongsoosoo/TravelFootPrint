@@ -13,31 +13,28 @@ import { PlaceService } from '../../../../../services/SearchService';
 import S from './SearchResultBox.styled';
 import { useAdrsResult } from './useAdrsResult';
 
-type TSearchBoxResult = {
+export type TSearchBoxResult = {
   searchKey: string | undefined;
   type: LocationType;
   setInput: (val) => void;
 };
 
-function SearchBoxResult({
-  setInput,
-  searchKey = '안암',
-  type,
-}: TSearchBoxResult) {
-  const dispatch = useDispatch();
-
-  const { SearchedList, isLoading, handleUpdate } = useAdrsResult(searchKey);
+function SearchBoxResult(props: TSearchBoxResult) {
+  const {
+    SearchedList,
+    isLoading,
+    handleUpdate,
+    handleItemClick,
+  } = useAdrsResult(props);
 
   const renderSearchedList = useCallback(
     (item, idx) => {
-      const handleItemClick = () => {
-        if (type == 0) dispatch(departureCord({ x: item.x, y: item.y }));
-        else dispatch(arriveCord({ x: item.x, y: item.y }));
-        setInput(item.place_name);
+      const handleListClick = () => {
+        handleItemClick(item);
       };
 
       return (
-        <S.SearchResultItemWrapper key={item.id} onClick={handleItemClick}>
+        <S.SearchResultItemWrapper key={item.id} onClick={handleListClick}>
           <S.SRItextBox>
             <S.SRItextPlaceName
               overSize={item.place_name.length > 10 ? true : false}

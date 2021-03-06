@@ -6,17 +6,14 @@ import { useFoodCounter } from '../../../../../../hook/useFoodCounter';
 import { ISelectedContainer } from '../../../../../../lib/types';
 import { RootState } from '../../../../../../redux';
 import S from './FMcontent.styled';
+import useFMcontent from './useFMcontent';
 
-interface IFMcontent {
+export interface IFMcontent {
   selectedC: ISelectedContainer;
 }
 
 function FMcontent({ selectedC }: IFMcontent) {
-  const list = useSelector((state: RootState) => state.food);
-  const [setFoodPlus, setFoodMinus] = useFoodCounter(
-    selectedC.name,
-    selectedC.weight,
-  );
+  const { list, setFoodPlus, setFoodMinus } = useFMcontent(selectedC);
 
   return (
     <S.FMcontentWrapper>

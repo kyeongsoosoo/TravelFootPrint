@@ -3,16 +3,14 @@ import { Link, useHistory } from 'react-router-dom';
 import { fakeClient } from '../../client/client';
 import Button from '../../Component/Button/Button';
 import S from './Home.styled';
+import useHome from './useHome';
 
 function Home() {
-  const history = useHistory();
+  const { history } = useHome();
+
   const handleLink = () => {
     history.push('/select/food');
   };
-
-  useEffect(() => {
-    fakeClient.getFakeReq();
-  }, []);
 
   return (
     <S.HomeWrapper>

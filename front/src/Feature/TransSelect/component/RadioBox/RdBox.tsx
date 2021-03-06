@@ -5,9 +5,10 @@ import { transportType } from '../../../../redux/distance/action';
 
 import S from './RdBox.styled';
 import RdBoxInp from './RdBoxInp/RdBoxInp';
+import useRdBox from './useRdBox';
 
 function RdBox() {
-  const dispatch = useDispatch();
+  const { setTransportType } = useRdBox();
 
   const allTransport = ['motorcycle', 'walk/Bike'];
 
@@ -17,7 +18,7 @@ function RdBox() {
     const target = event.target as HTMLDivElement;
     if (target.classList.contains('radio-inp')) {
       setSelect(target.id as TtransportType);
-      dispatch(transportType(selectedInp));
+      setTransportType(selectedInp);
     }
   };
 

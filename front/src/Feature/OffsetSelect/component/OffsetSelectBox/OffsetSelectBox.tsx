@@ -2,15 +2,13 @@ import React, { useCallback } from 'react';
 import S from './OffsetSelectBox.styled';
 import OffsetList from '../../../../Offset.json';
 import { IOffset } from '../../../../lib/types';
-import { useOffsetCount } from '../../../../hook/useOffsetCounter';
+import { useOffsetCount } from './useOffsetCounter';
 import SelectBox from '../../../../Component/SelectBox/SelectBox';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../redux';
 
 function OffsetSelectBox() {
-  const [setOffsetPlus, setOffsetMinus] = useOffsetCount();
-
-  const offsetCount = useSelector((state: RootState) => state.offset);
+  const { offsetCount, setOffsetMinus, setOffsetPlus } = useOffsetCount();
 
   const renderOffsetItem = useCallback(
     (item: IOffset) => {
@@ -41,7 +39,6 @@ function OffsetSelectBox() {
 
   return (
     <S.OffsetSelectBoxWrapper>
-      {console.log(OffsetList)}
       <S.OffsetSelectBox>{OffsetList.map(renderOffsetItem)}</S.OffsetSelectBox>
     </S.OffsetSelectBoxWrapper>
   );
