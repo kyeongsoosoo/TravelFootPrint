@@ -9,14 +9,6 @@ interface ISearchInput {
   type: LocationType;
 }
 
-declare global {
-  interface Window {
-    kakao;
-  }
-}
-
-const { kakao } = window;
-
 function SearchInput(props: ISearchInput) {
   const [isOpen, setOpen] = useState(false);
   const [address, setAddr] = useState<string>();
@@ -26,7 +18,7 @@ function SearchInput(props: ISearchInput) {
     setValue(event.target.value);
   };
 
-  const handleEnter = async (event: React.KeyboardEvent<HTMLDivElement>) => {
+  const handleEnter = async (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       setAddr(value);
       setOpen(!isOpen);
@@ -38,9 +30,10 @@ function SearchInput(props: ISearchInput) {
 
   return (
     <S.SearchTableWrapper>
-      <S.SearchInputWrapper onKeyDown={handleEnter}>
+      <S.SearchInputWrapper>
         <>
           <S.SearchInputInp
+            onKeyDown={handleEnter}
             placeholder={address || placeholderContent}
             onChange={handleInput}
             onClick={() => {

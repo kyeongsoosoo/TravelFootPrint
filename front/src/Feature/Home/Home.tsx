@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import { fakeClient } from '../../client/client';
 import Button from '../../Component/Button/Button';
 import S from './Home.styled';
 
@@ -8,6 +9,11 @@ function Home() {
   const handleLink = () => {
     history.push('/select/food');
   };
+
+  useEffect(() => {
+    fakeClient.getFakeReq();
+  }, []);
+
   return (
     <S.HomeWrapper>
       <S.HomeIconBox>

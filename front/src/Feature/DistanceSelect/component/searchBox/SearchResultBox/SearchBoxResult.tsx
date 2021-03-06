@@ -11,6 +11,7 @@ import { getLoacaData } from '../../../../../redux/location/action';
 import { PlaceService } from '../../../../../services/SearchService';
 
 import S from './SearchResultBox.styled';
+import { useAdrsResult } from './useAdrsResult';
 
 type TSearchBoxResult = {
   searchKey: string | undefined;
@@ -23,21 +24,9 @@ function SearchBoxResult({
   searchKey = '안암',
   type,
 }: TSearchBoxResult) {
-  const PS = PlaceService();
-
   const dispatch = useDispatch();
 
-  const SearchedList = useSelector(
-    (state: RootState) => state.location.locationData,
-  );
-
-  useEffect(() => {
-    PS.keywordSearch(searchKey, placeSearchCB);
-
-    function placeSearchCB(data, status, pagination) {
-      dispatch(getLoacaData(data));
-    }
-  }, [searchKey]);
+  const { SearchedList, isLoading, handleUpdate } = useAdrsResult(searchKey);
 
   const renderSearchedList = useCallback(
     (item, idx) => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router';
 import Home from './Feature/Home/Home';
 import S from './App.styled';
@@ -14,6 +14,8 @@ function App() {
   const handleHomeLink = () => {
     history.push('/');
   };
+  console.log('test용 입력');
+
   return (
     <S.AppWrapper>
       <Switch>
