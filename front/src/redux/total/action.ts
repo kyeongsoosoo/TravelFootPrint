@@ -8,14 +8,19 @@ export const TOTAL_START = 'total/loadingStart';
 
 export const TOTAl_FINISH = 'total/loadingFinish';
 
+export const TOTAL_TRAVEL = 'total/travel';
+
 export const setSemiTotal = createAction(TOTAL_SEMI)<number>();
 
 export const setFinalTotal = createAction(TOTAL_FINAL)<number>();
+
+export const setTravelTotal = createAction(TOTAL_TRAVEL)<number>();
 
 export const setLoadingStart = createAction(TOTAL_START)<undefined>();
 export const setLoadingFinish = createAction(TOTAl_FINISH)<undefined>();
 
 const actions = {
+  setTravelTotal,
   setSemiTotal,
   setLoadingStart,
   setLoadingFinish,
