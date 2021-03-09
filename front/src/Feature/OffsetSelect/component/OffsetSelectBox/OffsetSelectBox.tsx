@@ -3,7 +3,7 @@ import S from './OffsetSelectBox.styled';
 import OffsetList from '../../../../Offset.json';
 import { IOffset } from '../../../../lib/types';
 import { useOffsetCount } from './useOffsetCounter';
-import SelectBox from '../../../../Component/SelectBox/SelectBox';
+import CounterBox from '../../../../Component/CounterBox/CounterBox';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../redux';
 
@@ -20,7 +20,7 @@ function OffsetSelectBox() {
               *{item.detail.assumption}
             </S.OffsetItemTextDescript>
           </S.OffsetItemTextWrapper>
-          <SelectBox
+          <CounterBox
             width={30}
             height={70}
             minusClick={() => setOffsetMinus(item)}

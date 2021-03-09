@@ -8,10 +8,11 @@ const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 `;
 
 const AppHeader = styled.header`
-  width: 100%;
+  width: 50vw;
   height: 20vh;
   background-image: url(${HeaderIcon});
   background-repeat: no-repeat;
@@ -35,6 +36,7 @@ const AppFooter = styled.footer`
   text-align: center;
   background-color: ${props => props.theme.footerColor};
   color: #ffffff;
+  letter-spacing: 1.5px;
 `;
 
 export default { AppWrapper, AppHeader, AppMain, AppFooter };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import SelectBox from '../../../../../../Component/SelectBox/SelectBox';
+import CounterBox from '../../../../../../Component/CounterBox/CounterBox';
+
 import { useFoodCounter } from '../../../../../../hook/useFoodCounter';
 
 import { ISelectedContainer } from '../../../../../../lib/types';
@@ -18,7 +19,7 @@ function FMcontent({ selectedC }: IFMcontent) {
   return (
     <S.FMcontentWrapper>
       <S.FMcontentPhoto>{selectedC.name}</S.FMcontentPhoto>
-      <SelectBox
+      <CounterBox
         width={100}
         height={50}
         minusClick={setFoodMinus}

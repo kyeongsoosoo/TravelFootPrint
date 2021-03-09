@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { responsiveSize } from '../../lib/css/mixin';
 
 interface IButtonWrapper {
   width: number;
@@ -6,8 +7,9 @@ interface IButtonWrapper {
 }
 
 const ButtonWrapper = styled.button<IButtonWrapper>`
-  width: ${({ width }) => `${width}px`};
-  height: ${({ height }) => `${height}%`};
+  ${({ width, height }) =>
+    responsiveSize(width, height, width / 2, height / 2)};
+
   background-color: ${props => props.theme.mainColor};
   border-radius: 20px;
   ${props => props.theme.btnFont}

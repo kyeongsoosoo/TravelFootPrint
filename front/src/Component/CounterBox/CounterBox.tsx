@@ -1,5 +1,5 @@
 import React from 'react';
-import S from './SelectBox.styled';
+import S from './CounterBox.styled';
 
 interface ISelectBox {
   plusClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
@@ -9,7 +9,7 @@ interface ISelectBox {
   height: number;
 }
 
-function SelectBox(props: ISelectBox) {
+function CounterBox(props: ISelectBox) {
   return (
     <S.SelectBoxWrapper width={props.width} height={props.height}>
       <S.SelectBoxBtn onClick={props.minusClick}>-</S.SelectBoxBtn>
@@ -19,4 +19,4 @@ function SelectBox(props: ISelectBox) {
   );
 }
 
-export default SelectBox;
+export default CounterBox;
