@@ -4,8 +4,9 @@ import Tree from './tree.svg';
 
 export const GlobalStyle = createGlobalStyle`
     ${reset}
-
     body{
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+        font-family: 'Nanum Gothic', sans-serif;
         box-sizing: border-box;
         background-color: #EFF7E7;
         width: 100vw;
