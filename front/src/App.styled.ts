@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { flexCenter } from './lib/css/mixin';
+import { flexCenter, responsiveSize } from './lib/css/mixin';
 import HeaderIcon from './lib/image/header.svg';
 
 const AppWrapper = styled.div`
@@ -12,7 +12,7 @@ const AppWrapper = styled.div`
 `;
 
 const AppHeader = styled.header`
-  width: 50vw;
+  ${responsiveSize(400, 200, 200, 100)}
   height: 20vh;
   background-image: url(${HeaderIcon});
   background-repeat: no-repeat;

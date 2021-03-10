@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import { flexCenter } from '../../lib/css/mixin';
+import { TotalPage } from '../../Constant/Page';
+import { flexCenter, responsiveSize } from '../../lib/css/mixin';
+
+type ProgressBarType = {
+  pageNum: number;
+};
 
 const SelectFrameWrapper = styled.main`
   ${flexCenter}
@@ -7,6 +12,26 @@ const SelectFrameWrapper = styled.main`
   width: 100%;
   height: 65vh;
   padding-bottom: 20px;
+`;
+
+const SelectFrameProgressWrapper = styled.div`
+  position: relative;
+  ${flexCenter};
+  justify-content: flex-start;
+  ${responsiveSize(400, 20, 200, 10)};
+  background-color: white;
+  border-radius: 5px;
+`;
+const SelectFrameProgressBar = styled.div<ProgressBarType>`
+  ${({ pageNum }) =>
+    responsiveSize(
+      400 * (pageNum / TotalPage),
+      20,
+      200 * (pageNum / TotalPage),
+      10,
+    )}
+  background-color: ${({ theme }) => theme.mainColor};
+  border-radius: 5px;
 `;
 
 const SelectFrameTitle = styled.h1`
@@ -17,4 +42,6 @@ const SelectFrameTitle = styled.h1`
 export default {
   SelectFrameWrapper,
   SelectFrameTitle,
+  SelectFrameProgressBar,
+  SelectFrameProgressWrapper,
 };

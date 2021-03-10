@@ -6,7 +6,7 @@ import SelectFrame from '../../Component/SelectFrame/SelectFrame';
 
 function FoodSelect() {
   return (
-    <SelectFrame title="사용하신 용기를 골라주세요">
+    <SelectFrame title="사용하신 용기를 골라주세요" pageNum={1}>
       <FoodSelBox />
       <NavBox prevLink="/" nextLink="/select/distance" />
     </SelectFrame>
