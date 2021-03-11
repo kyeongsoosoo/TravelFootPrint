@@ -14,6 +14,12 @@ const ButtonWrapper = styled.button<IButtonWrapper>`
   border-radius: 20px;
   ${props => props.theme.btnFont}
   cursor: pointer;
+
+  &: active {
+    background-color: white;
+    color: ${props => props.theme.mainColor};
+    border: 3px solid ${props => props.theme.mainColor};
+  }
 `;
 
 export default { ButtonWrapper };

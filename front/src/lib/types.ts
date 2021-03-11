@@ -18,6 +18,11 @@ export interface IDriving {
   goal: ICord;
 }
 
+export type SelectType = {
+  name: string;
+  cost: number;
+};
+
 export type TtransportType = 'motorcycle' | 'walk/Bike';
 
 export interface IOffset {

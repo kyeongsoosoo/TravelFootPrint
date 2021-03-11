@@ -8,6 +8,8 @@ import TransSelect from './Feature/TransSelect/TransSelect';
 import SemiResult from './Feature/SemiResult/SemiResult';
 import OffsetSelect from './Feature/OffsetSelect/OffsetSelect';
 import FinalResult from './Feature/FinalResult/FinalResult';
+import TestSelect from './Feature/TestSelect/TestSelect';
+import CostSelect from './Feature/CostSelect/CostSelect';
 
 function App() {
   const history = useHistory();
@@ -26,10 +28,10 @@ function App() {
       </Switch>
       <S.AppMain>
         <Switch>
-          <Route path="/select/food" exact component={FoodSelect} />
-          <Route path="/select/distance" exact component={Distance} />
+          <Route path="/select" component={CostSelect} />
+          {/* <Route path="/select/distance" exact component={Distance} />
           <Route path="/select/transport" exact component={TransSelect} />
-          <Route path="/select/offset" exact component={OffsetSelect} />
+          <Route path="/select/offset" exact component={OffsetSelect} /> */}
           <Route path="/result/semi" exact component={SemiResult} />
           <Route path="/result/final" exact component={FinalResult} />
           <Route path="/" exact component={Home} />

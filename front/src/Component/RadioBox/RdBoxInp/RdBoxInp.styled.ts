@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { flexCenter } from '../../../../../lib/css/mixin';
+import { flexCenter, responsiveSize } from '../../../lib/css/mixin';
 
 type TRdBoxInpWrapper = {
   isSelected: boolean;
@@ -7,8 +7,8 @@ type TRdBoxInpWrapper = {
 
 const RdBoxInpWrapper = styled.div<TRdBoxInpWrapper>`
   ${flexCenter}
-  width: 80%;
-  height: 25%;
+  ${responsiveSize(500, 100, 300, 60)}
+  height: 7vh;
   background-color: ${({ isSelected }) =>
     isSelected
       ? css`

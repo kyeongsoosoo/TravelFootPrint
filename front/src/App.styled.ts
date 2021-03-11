@@ -12,7 +12,7 @@ const AppWrapper = styled.div`
 `;
 
 const AppHeader = styled.header`
-  ${responsiveSize(400, 200, 200, 100)}
+  ${responsiveSize(400, 200, 300, 200)}
   height: 20vh;
   background-image: url(${HeaderIcon});
   background-repeat: no-repeat;
