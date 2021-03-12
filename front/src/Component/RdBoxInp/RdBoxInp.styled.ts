@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { flexCenter, responsiveSize } from '../../../lib/css/mixin';
+import { flexCenter, responsiveSize } from '../../lib/css/mixin';
 
 type TRdBoxInpWrapper = {
   isSelected: boolean;
