@@ -1,14 +1,5 @@
 import React, { useCallback, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { LocationType } from '../../../../../lib/types';
-
-import { RootState } from '../../../../../redux';
-import {
-  arriveCord,
-  departureCord,
-} from '../../../../../redux/distance/action';
-import { getLoacaData } from '../../../../../redux/location/action';
-import { PlaceService } from '../../../../../services/SearchService';
+import { LocationType } from '../../../../../../lib/types';
 
 import S from './SearchResultBox.styled';
 import { useAdrsResult } from './useAdrsResult';

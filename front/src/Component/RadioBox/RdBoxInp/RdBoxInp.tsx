@@ -4,6 +4,7 @@ import S from './RdBoxInp.styled';
 interface IRdBoxInp {
   isSelected: boolean;
   id: string;
+  name: string;
 }
 
 function RdBoxInp(props: IRdBoxInp) {
@@ -14,7 +15,7 @@ function RdBoxInp(props: IRdBoxInp) {
       className={'radio-inp'}
     >
       <S.RdBoxInpText id={props.id} className={'radio-inp'}>
-        {props.id === 'motorcycle' ? '오토바이' : '걷기/자전거'}
+        {props.name}
       </S.RdBoxInpText>
     </S.RdBoxInpWrapper>
   );

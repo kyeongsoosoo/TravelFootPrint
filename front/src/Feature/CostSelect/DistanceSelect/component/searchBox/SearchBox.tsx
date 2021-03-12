@@ -1,5 +1,5 @@
 import React from 'react';
-import { LocationType } from '../../../../lib/types';
+import { LocationType } from '../../../../../lib/types';
 import S from './SearchBox.styled';
 import SearchInput from './SearchInput/SearchInput';
 

@@ -8,7 +8,7 @@ import TransSelect from './Feature/TransSelect/TransSelect';
 import SemiResult from './Feature/SemiResult/SemiResult';
 import OffsetSelect from './Feature/OffsetSelect/OffsetSelect';
 import FinalResult from './Feature/FinalResult/FinalResult';
-import TestSelect from './Feature/TestSelect/TestSelect';
+import TestSelect from './Feature/CostSelect/TestSelect/TestSelect';
 import CostSelect from './Feature/CostSelect/CostSelect';
 
 function App() {

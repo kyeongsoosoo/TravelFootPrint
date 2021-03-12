@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { flexCenter } from '../../../../../lib/css/mixin';
+import { flexCenter, responsiveSize } from '../../../../../../lib/css/mixin';
 
 const SearchResultBoxWrapper = styled.div`
-  width: 100%;
-  height: 50vh;
+  ${responsiveSize(600, 600, 300, 400)}
+  flex-shrink: 0;
   background-color: white;
   overflow-y: auto;
   cursor: pointer;

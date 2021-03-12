@@ -20,8 +20,11 @@ export interface IDriving {
 
 export type SelectType = {
   name: string;
-  cost: number;
+  cost: number | boolean;
+  category: SelectionCategory;
 };
+
+export type SelectionCategory = 'Food' | 'isDriving';
 
 export type TtransportType = 'motorcycle' | 'walk/Bike';
 

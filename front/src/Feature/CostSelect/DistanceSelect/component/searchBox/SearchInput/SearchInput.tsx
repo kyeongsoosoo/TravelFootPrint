@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LocationType } from '../../../../../lib/types';
+import { LocationType } from '../../../../../../lib/types';
 
 import S from './SearchInput.styled';
 
@@ -42,20 +42,18 @@ function SearchInput(props: ISearchInput) {
             }}
             value={value}
           ></S.SearchInputInp>
-          {isOpen && (
-            <SearchBoxResult
-              type={props.type}
-              searchKey={address}
-              setInput={val => {
-                setOpen(!open);
-                setValue(val);
-              }}
-            />
-          )}
         </>
       </S.SearchInputWrapper>
-      <S.SearchSubmitBtn />
-      {/* 온클릭 구현 */}
+      {isOpen && (
+        <SearchBoxResult
+          type={props.type}
+          searchKey={address}
+          setInput={val => {
+            setOpen(!open);
+            setValue(val);
+          }}
+        />
+      )}
     </S.SearchTableWrapper>
   );
 }

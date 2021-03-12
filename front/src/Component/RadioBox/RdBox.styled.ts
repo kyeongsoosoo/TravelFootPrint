@@ -5,7 +5,7 @@ const RdBoxWrapper = styled.div`
   ${flexCenter}
   flex-direction: column;
   width: 70%;
-  height: 60%;
+  min-height: 60%;
 `;
 
 export default { RdBoxWrapper };

@@ -1,12 +1,13 @@
 import { BiSearchAlt2 } from 'react-icons/bi';
 import styled from 'styled-components';
-import { flexCenter } from '../../../../../lib/css/mixin';
+import { flexCenter, responsiveSize } from '../../../../../../lib/css/mixin';
 
 const SearchTableWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  height: 30%;
+  align-items: center;
+  min-height: 10vh;
   width: 100%;
   & + & {
     margin-top: 3vh;
@@ -15,9 +16,9 @@ const SearchTableWrapper = styled.div`
 
 const SearchInputWrapper = styled.div`
   ${flexCenter}
+  flex-shrink: 0;
   flex-direction: column;
-  width: 70%;
-  max-width: 700px;
+  ${responsiveSize(600, 100, 300, 50)}
 `;
 
 const SearchInputInp = styled.input`

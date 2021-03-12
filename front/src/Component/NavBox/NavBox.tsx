@@ -11,12 +11,12 @@ interface ILinkBox {
 function LinkBox(props: ILinkBox) {
   return (
     <S.LinkBoxWrapper>
-      <Button width={200} height={100} to={props.prevLink}>
+      <Button width={150} height={70} to={props.prevLink}>
         이전
       </Button>
       <Button
-        width={200}
-        height={100}
+        width={150}
+        height={70}
         to={props.nextLink}
         onClick={props.nextClick}
       >

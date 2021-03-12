@@ -10,7 +10,7 @@ const SelectFrameWrapper = styled.main`
   ${flexCenter}
   flex-direction: column;
   width: 100%;
-  height: 65vh;
+  min-height: 65vh;
   padding-bottom: 20px;
 `;
 

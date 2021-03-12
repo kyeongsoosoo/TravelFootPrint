@@ -1,12 +1,9 @@
-import React, { useCallback, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useCallback } from 'react';
 import useSingleSelect from '../../hook/useSingleSelect';
-import { SelectType, TtransportType } from '../../lib/types';
-import { transportType } from '../../redux/distance/action';
+import { SelectType } from '../../lib/types';
 
 import S from './RdBox.styled';
 import RdBoxInp from './RdBoxInp/RdBoxInp';
-import useRdBox from './useRadioBox';
 
 type RadioBoxType = {
   choices: SelectType[];
@@ -19,9 +16,9 @@ function RadioBox({ choices, setStorage }: RadioBoxType) {
   const handleInpClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const target = event.target as HTMLDivElement;
     const selectedInfo = choices.find(item => item.name === target.id);
-    if (target.classList.contains('radio-inp')) {
+    if (target.classList.contains('radio-inp') && selectedInfo) {
       setSelected(target.id);
-      setStorage(choices[0] || selectedInfo);
+      setStorage(selectedInfo);
     }
   };
 
@@ -31,6 +28,7 @@ function RadioBox({ choices, setStorage }: RadioBoxType) {
         <RdBoxInp
           key={item.name}
           id={item.name}
+          name={item.name}
           isSelected={selectedItem === item.name}
         />
       );

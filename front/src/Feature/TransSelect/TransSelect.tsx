@@ -3,7 +3,7 @@ import React from 'react';
 import NavBox from '../../Component/NavBox/NavBox';
 import SelectFrame from '../../Component/SelectFrame/SelectFrame';
 
-import RdBox from './component/RadioBox/RdBox';
+import RdBox from '../../Component/RadioBox/RadioBox';
 
 function TransSelect() {
   return (

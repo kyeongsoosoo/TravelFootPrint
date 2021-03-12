@@ -8,7 +8,7 @@ interface IButtonWrapper {
 
 const ButtonWrapper = styled.button<IButtonWrapper>`
   ${({ width, height }) =>
-    responsiveSize(width, height, width / 2, height / 2)};
+    responsiveSize(width, height, width / 1.5, height / 1.5)};
 
   background-color: ${props => props.theme.mainColor};
   border-radius: 20px;

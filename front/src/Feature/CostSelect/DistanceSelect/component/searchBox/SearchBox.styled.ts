@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { flexCenter } from '../../../../lib/css/mixin';
+import { flexCenter } from '../../../../../lib/css/mixin';
 
 const SearchBoxWrapper = styled.section`
   display: flex;
   flex-direction: column;
   margin-top: 10%;
   width: 100%;
-  height: 50%;
+  min-height: 50%;
 `;
 
 export default {
