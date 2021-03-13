@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { IOffset } from '../../../../lib/types';
+import { IOffset, OffsetSelectType } from '../../../../lib/types';
 import { RootState } from '../../../../redux';
 import {
   minusOffsetCount,
@@ -7,18 +7,18 @@ import {
 } from '../../../../redux/offset/actions';
 
 export function useOffsetCount() {
-  const offsetCount = useSelector((state: RootState) => state.offset);
+  const OffsetList = useSelector((state: RootState) => state.offset);
 
   const dispatch = useDispatch();
-  const setOffsetPlus = (offset: IOffset) => {
+  const setOffsetPlus = (offset: OffsetSelectType) => {
     dispatch(plusOffsetCount(offset));
   };
-  const setOffsetMinus = (offset: IOffset) => {
+  const setOffsetMinus = (offset: OffsetSelectType) => {
     dispatch(minusOffsetCount(offset));
   };
 
   return {
-    offsetCount,
+    OffsetList,
     setOffsetMinus,
     setOffsetPlus,
   };

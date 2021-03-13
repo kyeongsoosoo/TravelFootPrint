@@ -15,13 +15,13 @@ export const responsiveSize = (
   /* PC (해상도 768px)*/
   @media all and (min-width: 768px) {
     width: ${pcWidth}px;
-    height: ${pcHeight}px;
+    min-height: ${pcHeight}px;
   }
 
   /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
   @media all and (max-width: 767px) {
     width: ${mobileWidth}px;
-    height: ${mobileHeight}px;
+    min-height: ${mobileHeight}px;
   }
 `;
 

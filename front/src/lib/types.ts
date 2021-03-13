@@ -25,6 +25,14 @@ export type SelectType = {
   category: SelectionCategory;
 };
 
+export type OffsetSelectType = {
+  name: string;
+  cost: number | boolean;
+  description?: string;
+  unitDescription: string;
+  unit: number;
+};
+
 export type SelectionCategory =
   | '배달 음식'
   | 'isDriving'

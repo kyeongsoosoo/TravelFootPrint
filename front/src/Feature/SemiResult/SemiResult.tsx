@@ -7,10 +7,6 @@ import useGetSemi from '../../hook/useGetSemi';
 import { RootState } from '../../redux';
 import S from './SemiResult.styled';
 import ExplainBox from '../../Component/ExplainBox/ExplainBox';
-import { SelectType } from '../../lib/types';
-import { DAILY_STATE } from '../../redux/daily/daily';
-import { DISTANCE_STATE } from '../../redux/distance/distance';
-import { FOOD_STATE } from '../../redux/food/food';
 
 function SemiResult() {
   const { data, error, isLoading } = useGetDistance();

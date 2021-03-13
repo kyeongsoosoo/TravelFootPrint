@@ -1,46 +1,38 @@
 import React, { useCallback } from 'react';
 import S from './OffsetSelectBox.styled';
-import OffsetList from '../../../../Offset.json';
-import { IOffset } from '../../../../lib/types';
+import { IOffset, OffsetSelectType } from '../../../../lib/types';
 import { useOffsetCount } from './useOffsetCounter';
 import CounterBox from '../../../../Component/CounterBox/CounterBox';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../../redux';
+import { OffsetType } from '../../../../Constant/OffsetType';
 
 function OffsetSelectBox() {
-  const { offsetCount, setOffsetMinus, setOffsetPlus } = useOffsetCount();
+  const { OffsetList, setOffsetMinus, setOffsetPlus } = useOffsetCount();
 
   const renderOffsetItem = useCallback(
-    (item: IOffset) => {
+    (item: OffsetSelectType) => {
       return (
-        <S.OffsetItemWrapper key={item.idx}>
+        <S.OffsetItemWrapper key={item.name}>
           <S.OffsetItemTextWrapper>
-            <S.OffsetItemTextTitle>{item.offsetWay}</S.OffsetItemTextTitle>
+            <S.OffsetItemTextTitle>{item.name}</S.OffsetItemTextTitle>
             <S.OffsetItemTextDescript>
-              *{item.detail.assumption}
+              *{item.unitDescription}
             </S.OffsetItemTextDescript>
           </S.OffsetItemTextWrapper>
           <CounterBox
             width={30}
-            height={70}
+            height={50}
             minusClick={() => setOffsetMinus(item)}
             plusClick={() => setOffsetPlus(item)}
-            count={
-              offsetCount[item.offsetWay]
-                ? offsetCount[item.offsetWay].count
-                : 0
-            }
+            count={OffsetList[item.name] ? OffsetList[item.name].count : 0}
           />
         </S.OffsetItemWrapper>
       );
     },
-    [offsetCount],
+    [OffsetList],
   );
 
   return (
-    <S.OffsetSelectBoxWrapper>
-      <S.OffsetSelectBox>{OffsetList.map(renderOffsetItem)}</S.OffsetSelectBox>
-    </S.OffsetSelectBoxWrapper>
+    <S.OffsetSelectBox>{OffsetType.map(renderOffsetItem)}</S.OffsetSelectBox>
   );
 }
 

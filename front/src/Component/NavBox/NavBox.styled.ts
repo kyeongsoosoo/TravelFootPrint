@@ -7,6 +7,7 @@ const LinkBoxWrapper = styled.nav`
   max-width: 900px;
   height: 5vh;
   ${props => props.theme.btnFont};
+  margin-top: 40px;
 `;
 
 export default {

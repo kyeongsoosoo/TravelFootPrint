@@ -22,7 +22,7 @@ const SelectBoxBtn = styled.button`
   border: none;
   background-color: ${props => props.theme.mainColor};
   color: white;
-  ${props => props.theme.middleSize}
+  ${props => props.theme.titleSize}
   cursor: pointer;
 `;
 

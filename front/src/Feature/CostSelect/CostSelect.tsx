@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
+import OffsetSelect from '../OffsetSelect/OffsetSelect';
 
 import CarSelect from './CarSelect/CarSelect';
 import CoffeeSelect from './CoffeeSelect/CoffeeSelect';
@@ -21,6 +22,7 @@ function CostSelect() {
       <Route path="/select/lighttime" exact component={LightTimeSelect} />
       <Route path="/select/isDriving" exact component={CarSelect} />
       <Route path="/select/Driving" exact component={Distance} />
+      <Route path="/select/offset" exact component={OffsetSelect} />
     </Switch>
   );
 }

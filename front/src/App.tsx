@@ -29,9 +29,7 @@ function App() {
       <S.AppMain>
         <Switch>
           <Route path="/select" component={CostSelect} />
-          {/* <Route path="/select/distance" exact component={Distance} />
-          <Route path="/select/transport" exact component={TransSelect} />
-          <Route path="/select/offset" exact component={OffsetSelect} /> */}
+          <Route path="/select/offset" exact component={OffsetSelect} />
           <Route path="/result/semi" exact component={SemiResult} />
           <Route path="/result/final" exact component={FinalResult} />
           <Route path="/" exact component={Home} />
