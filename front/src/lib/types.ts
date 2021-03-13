@@ -21,17 +21,18 @@ export interface IDriving {
 export type SelectType = {
   name: string;
   cost: number | boolean;
+  description?: string;
   category: SelectionCategory;
 };
 
 export type SelectionCategory =
-  | 'Food'
+  | '배달 음식'
   | 'isDriving'
-  | 'Coffee'
-  | 'Meet'
-  | 'Streaming'
-  | 'ComputerTime'
-  | 'LightTime';
+  | '커피 마시기'
+  | '고기 먹기'
+  | '스트리밍 시청하기'
+  | '컴퓨터 사용하기'
+  | '전구 켜놓기';
 
 export type TtransportType = 'motorcycle' | 'walk/Bike';
 

@@ -5,7 +5,7 @@ import { SelectType } from '../../lib/types';
 import { DAILY_ACTION, DAILY_SELECT } from './action';
 
 export type DAILY_STATE = {
-  [dailyName: string]: Partial<SelectType>;
+  [dailyName: string]: SelectType;
 };
 
 const initialState: DAILY_STATE = {};
@@ -16,6 +16,7 @@ export const daily = createReducer<DAILY_STATE, DAILY_ACTION>(initialState, {
     [action.payload.category]: {
       cost: action.payload.cost,
       name: action.payload.name,
+      category: action.payload.category,
     },
   }),
 });

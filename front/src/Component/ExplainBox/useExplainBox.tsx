@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../../../redux';
+import { RootState } from '../../redux';
 
 function useExplainBox() {
   const offsetItems = useSelector((state: RootState) => state.offset);

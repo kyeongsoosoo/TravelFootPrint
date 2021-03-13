@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import NavBox from '../../Component/NavBox/NavBox';
 import Loading from '../../Component/Loading/Loading';
@@ -6,10 +6,16 @@ import useGetDistance from '../../hook/useGetDistance';
 import useGetSemi from '../../hook/useGetSemi';
 import { RootState } from '../../redux';
 import S from './SemiResult.styled';
+import ExplainBox from '../../Component/ExplainBox/ExplainBox';
+import { SelectType } from '../../lib/types';
+import { DAILY_STATE } from '../../redux/daily/daily';
+import { DISTANCE_STATE } from '../../redux/distance/distance';
+import { FOOD_STATE } from '../../redux/food/food';
 
 function SemiResult() {
-  const { distance, isLoading } = useGetDistance();
-  const sum = useGetSemi();
+  const { data, error, isLoading } = useGetDistance();
+  const { food, distance, daily, sum } = useGetSemi();
+
   return (
     <>
       {isLoading ? (
@@ -20,11 +26,11 @@ function SemiResult() {
           {console.log(distance)}
           <S.SemiResultResultBox>{sum ? sum : 0}g</S.SemiResultResultBox>
           <S.SemiResultTitle>입니다.</S.SemiResultTitle>
+          <ExplainBox ItemList={daily} />
           <S.SemiResultTextBox>
-            우리는 일상속에서 다양한 방법을 통해 탄소발자국을 상쇄시킬 수
-            있습니다. 한번 알아볼까요?
+            나의 하루 탄소발자국을 줄여 <br /> 여행발자국을 늘려볼까요?
           </S.SemiResultTextBox>
-          <NavBox prevLink="/select/transport" nextLink="/select/offset" />
+          <NavBox prevLink="/select/isDriving" nextLink="/select/offset" />
         </S.SemiResultWrapper>
       )}
     </>

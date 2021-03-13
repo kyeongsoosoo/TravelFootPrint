@@ -4,22 +4,22 @@ export const CoffeType: SelectType[] = [
   {
     name: '안마셔요',
     cost: 0,
-    category: 'Coffee',
+    category: '커피 마시기',
   },
   {
     name: '1잔',
     cost: 21,
-    category: 'Coffee',
+    category: '커피 마시기',
   },
   {
     name: '2잔',
     cost: 42,
-    category: 'Coffee',
+    category: '커피 마시기',
   },
   {
     name: '3잔 이상',
     cost: 63,
-    category: 'Coffee',
+    category: '커피 마시기',
   },
 ];
 
@@ -27,22 +27,22 @@ export const MeetType: SelectType[] = [
   {
     name: '안먹었어요',
     cost: 0,
-    category: 'Meet',
+    category: '고기 먹기',
   },
   {
-    name: '1잔',
+    name: '1인분',
     cost: 2250,
-    category: 'Meet',
+    category: '고기 먹기',
   },
   {
-    name: '2잔',
+    name: '2인분',
     cost: 4500,
-    category: 'Meet',
+    category: '고기 먹기',
   },
   {
-    name: '3잔 이상',
+    name: '3인분 이상',
     cost: 6750,
-    category: 'Meet',
+    category: '고기 먹기',
   },
 ];
 
@@ -50,22 +50,22 @@ export const StreamingType: SelectType[] = [
   {
     name: '안봤어요',
     cost: 0,
-    category: 'Streaming',
+    category: '스트리밍 시청하기',
   },
   {
     name: '1시간정도',
     cost: 3200,
-    category: 'Streaming',
+    category: '스트리밍 시청하기',
   },
   {
     name: '2시간정도',
     cost: 6400,
-    category: 'Streaming',
+    category: '스트리밍 시청하기',
   },
   {
     name: '3시간 이상',
     cost: 9600,
-    category: 'Streaming',
+    category: '스트리밍 시청하기',
   },
 ];
 
@@ -73,22 +73,22 @@ export const ComputerTimeType: SelectType[] = [
   {
     name: '안썼어요!',
     cost: 0,
-    category: 'ComputerTime',
+    category: '컴퓨터 사용하기',
   },
   {
     name: '1시간정도',
     cost: 90,
-    category: 'ComputerTime',
+    category: '컴퓨터 사용하기',
   },
   {
     name: '2시간정도',
     cost: 180,
-    category: 'ComputerTime',
+    category: '컴퓨터 사용하기',
   },
   {
     name: '3시간 이상',
     cost: 270,
-    category: 'ComputerTime',
+    category: '컴퓨터 사용하기',
   },
 ];
 
@@ -96,22 +96,22 @@ export const LightTimeType: SelectType[] = [
   {
     name: '켜두지 않았어요',
     cost: 0,
-    category: 'LightTime',
+    category: '전구 켜놓기',
   },
   {
     name: '1시간',
     cost: 34,
-    category: 'LightTime',
+    category: '전구 켜놓기',
   },
   {
     name: '2시간',
     cost: 68,
-    category: 'LightTime',
+    category: '전구 켜놓기',
   },
   {
     name: '3시간 이상',
     cost: 102,
-    category: 'LightTime',
+    category: '전구 켜놓기',
   },
 ];
 

@@ -11,14 +11,11 @@ export function useGetDistance() {
 
   const dispatch = useDispatch();
 
-  if (payload.isDriving === false) {
-    return {
-      distance: 0,
-      isLoading: false,
-    };
-  }
-
-  const { data } = useSWR('getDistance', async () => {
+  const fetchMapApi = async () => {
+    if (payload.isDriving === false) {
+      dispatch(totalDistance('0'));
+      return '0';
+    }
     if (payload.departure === null) return;
     if (payload.arrival === null) return;
     const sum = await NaverMapService.getNavi(
@@ -27,11 +24,16 @@ export function useGetDistance() {
     );
     dispatch(totalDistance(sum.distance));
     return sum;
+  };
+
+  const { data, error, isValidating } = useSWR('getDistance', fetchMapApi, {
+    revalidateOnFocus: false,
   });
 
   return {
-    distance: data,
-    isLoading: !data,
+    data,
+    error,
+    isLoading: isValidating,
   };
 }
 

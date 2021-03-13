@@ -34,6 +34,7 @@ const AppFooter = styled.footer`
   width: 100%;
   height: 15vh;
   text-align: center;
+  font-size: ${({ theme }) => theme.smallFont}
   background-color: ${props => props.theme.footerColor};
   color: #ffffff;
   letter-spacing: 1.5px;

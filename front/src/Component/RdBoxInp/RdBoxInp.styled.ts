@@ -18,12 +18,12 @@ const RdBoxInpWrapper = styled.div<TRdBoxInpWrapper>`
   border-radius: 20px;
   cursor: pointer;
   & + & {
-    margin-top: 5%;
+    margin-top: 10px;
   }
 `;
 
 const RdBoxInpText = styled.div`
-  font-size: 32px;
+  font-size: ${({ theme }) => theme.btnFont}
   font-weight: 800;
 `;
 
