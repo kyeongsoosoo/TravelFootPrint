@@ -3,12 +3,12 @@ import { Route, Switch, useHistory } from 'react-router';
 import Home from './Feature/Home/Home';
 import S from './App.styled';
 import FoodSelect from './Feature/FoodSelect/FoodSelect';
-import Distance from './Feature/DistanceSelect/Distance';
+import Distance from './Feature/CostSelect/DistanceSelect/Distance';
 import TransSelect from './Feature/TransSelect/TransSelect';
 import SemiResult from './Feature/SemiResult/SemiResult';
 import OffsetSelect from './Feature/OffsetSelect/OffsetSelect';
 import FinalResult from './Feature/FinalResult/FinalResult';
-import TestSelect from './Feature/CostSelect/TestSelect/TestSelect';
+
 import CostSelect from './Feature/CostSelect/CostSelect';
 
 function App() {
@@ -37,15 +37,23 @@ function App() {
           <Route path="/" exact component={Home} />
         </Switch>
       </S.AppMain>
-      <S.AppFooter>
-        <p style={{ margin: 0 }}>Directed by Dongwook Kim</p>
-        <p style={{ margin: 0 }}>Developed by Kyeongsoo Kim</p>
-        <p style={{ margin: 0 }}>Designed by Doyoon Lee</p>
-        <br />
-        <p style={{ margin: 0 }}>
-          Copyright &copy; 2021 탄소의 민족 All Rights Reserved
-        </p>
-      </S.AppFooter>
+      <Switch>
+        <Route
+          path="/"
+          exact
+          render={() => (
+            <S.AppFooter>
+              <p style={{ margin: 0 }}>Directed by Dongwook Kim</p>
+              <p style={{ margin: 0 }}>Developed by Kyeongsoo Kim</p>
+              <p style={{ margin: 0 }}>Designed by Doyoon Lee</p>
+              <br />
+              <p style={{ margin: 0 }}>
+                Copyright &copy; 2021 탄소의 민족 All Rights Reserved
+              </p>
+            </S.AppFooter>
+          )}
+        />
+      </Switch>
     </S.AppWrapper>
   );
 }

@@ -24,7 +24,14 @@ export type SelectType = {
   category: SelectionCategory;
 };
 
-export type SelectionCategory = 'Food' | 'isDriving';
+export type SelectionCategory =
+  | 'Food'
+  | 'isDriving'
+  | 'Coffee'
+  | 'Meet'
+  | 'Streaming'
+  | 'ComputerTime'
+  | 'LightTime';
 
 export type TtransportType = 'motorcycle' | 'walk/Bike';
 

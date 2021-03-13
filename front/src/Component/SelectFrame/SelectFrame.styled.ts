@@ -8,9 +8,10 @@ type ProgressBarType = {
 
 const SelectFrameWrapper = styled.main`
   ${flexCenter}
+  justify-content: space-around;
   flex-direction: column;
   width: 100%;
-  min-height: 65vh;
+  min-height: 80vh;
   padding-bottom: 20px;
 `;
 
@@ -37,6 +38,7 @@ const SelectFrameProgressBar = styled.div<ProgressBarType>`
 const SelectFrameTitle = styled.h1`
   ${props => props.theme.titleSize}
   letter-spacing: 1px;
+  margin: 10px 0;
 `;
 
 export default {

@@ -7,7 +7,7 @@ type TRdBoxInpWrapper = {
 
 const RdBoxInpWrapper = styled.div<TRdBoxInpWrapper>`
   ${flexCenter}
-  ${responsiveSize(500, 100, 300, 60)}
+  ${responsiveSize(500, 80, 270, 50)}
   height: 7vh;
   background-color: ${({ isSelected }) =>
     isSelected
@@ -15,7 +15,7 @@ const RdBoxInpWrapper = styled.div<TRdBoxInpWrapper>`
           ${props => props.theme.mainColor}
         `
       : 'white'};
-  border-radius: 15px;
+  border-radius: 20px;
   cursor: pointer;
   & + & {
     margin-top: 5%;

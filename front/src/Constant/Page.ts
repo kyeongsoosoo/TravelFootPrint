@@ -1,7 +1,12 @@
-export const TotalPage = 5;
+export const TotalPage = 9;
 
-export enum PageInfo {
+export enum PaginationInfo {
   Food = 1,
-  isDriving = 2,
-  Driving = 3,
+  Coffee = 2,
+  Meet = 3,
+  Streaming = 4,
+  ComputerTime = 5,
+  LightTime = 6,
+  isDriving = 7,
+  Driving = 8,
 }

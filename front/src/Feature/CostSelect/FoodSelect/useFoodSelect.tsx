@@ -4,7 +4,7 @@ import { SelectType } from '../../../lib/types';
 import { setSelection } from '../../../redux/daily/action';
 import { toggleFood } from '../../../redux/food/action';
 
-function useTestSelect() {
+function useFoodSelect() {
   const dispatch = useDispatch();
   const setTest = (item: SelectType) => {
     dispatch(toggleFood(item));
@@ -12,4 +12,4 @@ function useTestSelect() {
   return { setTest };
 }
 
-export default useTestSelect;
+export default useFoodSelect;

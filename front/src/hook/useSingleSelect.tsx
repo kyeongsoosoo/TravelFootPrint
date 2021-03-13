@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { SelectType } from '../lib/types';
 
 function useSingleSelect(choice: SelectType) {
-  const [selectedItem, setSelected] = useState<string>(choice.name);
+  const [selectedItem, setSelected] = useState<string>();
 
   return {
     selectedItem,

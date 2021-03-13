@@ -11,6 +11,13 @@ export function useGetDistance() {
 
   const dispatch = useDispatch();
 
+  if (payload.isDriving === false) {
+    return {
+      distance: 0,
+      isLoading: false,
+    };
+  }
+
   const { data } = useSWR('getDistance', async () => {
     if (payload.departure === null) return;
     if (payload.arrival === null) return;
