@@ -10,9 +10,11 @@ interface ISelectFrame {
 function SelectFrame(props: ISelectFrame) {
   return (
     <S.SelectFrameWrapper>
-      <S.SelectFrameProgressWrapper>
-        {props.pageNum && <S.SelectFrameProgressBar pageNum={props.pageNum} />}
-      </S.SelectFrameProgressWrapper>
+      {props.pageNum && (
+        <S.SelectFrameProgressWrapper>
+          <S.SelectFrameProgressBar pageNum={props.pageNum} />
+        </S.SelectFrameProgressWrapper>
+      )}
       <S.SelectFrameTitle>{props.title}</S.SelectFrameTitle>
       {props.children}
     </S.SelectFrameWrapper>

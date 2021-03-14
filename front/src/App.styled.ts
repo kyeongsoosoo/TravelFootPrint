@@ -12,7 +12,7 @@ const AppWrapper = styled.div`
 `;
 
 const AppHeader = styled.header`
-  ${responsiveSize(400, 150, 300, 100)}
+  ${responsiveSize(400, 150, 250, 100)}
 
   background-image: url(${HeaderIcon});
   background-repeat: no-repeat;
@@ -22,9 +22,11 @@ const AppHeader = styled.header`
 
 const AppMain = styled.main`
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
+
   min-height: 65vh;
 `;
 

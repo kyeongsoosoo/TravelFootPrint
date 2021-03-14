@@ -10,14 +10,13 @@ const SemiResultWrapper = styled.main`
   padding: 10% 0;
 `;
 
-const SemiResultTitle = styled.h1`
+const SemiResultTitle = styled.div`
   font-size: ${props => props.theme.titleSize};
 `;
 
 const SemiResultResultBox = styled.div`
   ${flexCenter}
   ${responsiveSize(400, 150, 250, 100)}
-  height: 30%;
   border-radius: 20px;
   background-color: white;
   font-size: ${({ theme }) => theme.titleSize};

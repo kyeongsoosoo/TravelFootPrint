@@ -38,7 +38,7 @@ const SelectFrameProgressBar = styled.div<ProgressBarType>`
 const SelectFrameTitle = styled.h1`
   ${props => props.theme.titleSize}
   letter-spacing: 1px;
-  margin: 10px 0;
+  margin: 30px 0;
 `;
 
 export default {

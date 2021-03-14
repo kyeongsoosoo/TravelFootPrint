@@ -63,7 +63,7 @@ export const OffsetType: OffsetSelectType[] = [
     name: '사용 안하는 컴퓨터 끄기',
     cost: 90,
     unitDescription:
-      '단위는 1시간으로 하며 모니터가 켜져 있는 PC컴퓨터로 계산 됩니다.',
+      '단위는 1시간으로 하며 모니터가 켜져 있는 시간으로 계산 됩니다.',
     unit: 1,
     description:
       '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.',

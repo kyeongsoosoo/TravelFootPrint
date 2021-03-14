@@ -1,9 +1,9 @@
 import React from 'react';
 import DaumPostcode from 'react-daum-postcode';
 import { useDispatch } from 'react-redux';
-import { mapClient } from '../../client/client';
-import { LocationType } from '../../lib/types';
-import { arriveCord, departureCord } from '../../redux/distance/action';
+import { mapClient } from '../../../client/client';
+import { LocationType } from '../../../lib/types';
+import { arriveCord, departureCord } from '../../../redux/distance/action';
 
 interface IPost {
   handleInput: (item: any) => void;

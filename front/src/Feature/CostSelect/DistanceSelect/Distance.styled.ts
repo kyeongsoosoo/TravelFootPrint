@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { flexCenter } from '../../lib/css/mixin';
+import { flexCenter } from '../../../lib/css/mixin';
 
 const DistanceWrapper = styled.main`
   ${flexCenter}
