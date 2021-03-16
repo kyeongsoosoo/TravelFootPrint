@@ -8,15 +8,15 @@ export const GlobalStyle = createGlobalStyle`
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
         font-family: 'Nanum Gothic', sans-serif;
         box-sizing: border-box;
-        background-color: #EFF7E7;
         width: 100vw;
         height: 100vh;
     }
-
+    
     #root{
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #EFF7E7;
         opacity: 0.9;
         width: 100%;
         min-height: 100%;
