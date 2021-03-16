@@ -1,24 +1,46 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+
 import Loading from '../../Component/Loading/Loading';
-import { RootState } from '../../redux';
-import Receipt from './component/Receipt/Receipt';
-import TierBox from './component/TierBox/TierBox';
+import { useGetFinal } from './useGetFinal';
+
 import S from './FinalResult.styled';
+import { TicketService } from '../../services/TicketService';
+import TicketBox from './component/TicketBox/TicketBox';
+import Divider from '../../Component/Divider/Divider';
+import OffsetList from './component/OffsetList/OffsetList';
+import Button from '../../Component/Button/Button';
 
 function FinalResult() {
-  const finalTotal = useSelector((state: RootState) => state.total.final);
-  const loading = useSelector((state: RootState) => state.total.loading);
+  const {
+    isFinished,
+    costTotal,
+    finalTotal,
+    ticketInfo,
+    ticketURL,
+  } = useGetFinal();
+
+  const TicketBoxProp = {
+    costTotal,
+    finalTotal,
+    ticketInfo,
+    imgURL: ticketURL,
+  };
 
   return (
     <>
-      {loading ? (
+      {!isFinished ? (
         <Loading />
       ) : (
-        <S.FinalResultBox>
-          <TierBox tierInfo={finalTotal || 0} />
-          <Receipt />
-        </S.FinalResultBox>
+        <>
+          <S.FinalResultBox>
+            {ticketURL && <TicketBox {...TicketBoxProp} />}
+            <Divider />
+            <OffsetList />
+            <Button width={500} height={150} to="/">
+              다시하기
+            </Button>
+          </S.FinalResultBox>
+        </>
       )}
     </>
   );

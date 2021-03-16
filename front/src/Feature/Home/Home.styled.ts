@@ -1,20 +1,19 @@
 import styled, { css } from 'styled-components';
-import { flexCenter } from '../../lib/css/mixin';
-import MainIcon from '../../lib/image/main.svg';
+import { flexCenter, responsiveSize } from '../../lib/css/mixin';
+import MainIcon from '../../lib/assets/logo/main.svg';
 
 const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   height: 85vh;
 `;
 
 const HomeIconBox = styled.section`
   ${flexCenter}
-  width: 100%;
-  height: 35vh;
+  ${responsiveSize(425, 360, 325, 260)};
 `;
 
 const HomeIconIcon = styled.div`
@@ -39,9 +38,7 @@ const HomeHookBox = styled.section`
 `;
 
 const HomeBtnBox = styled.section`
-  height: 15vh;
-  width: 50%;
-  ${flexCenter}
+  ${flexCenter};
 `;
 
 export default {

@@ -1,27 +1,25 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import SelectBox from '../../../../../../Component/SelectBox/SelectBox';
+import CounterBox from '../../../../../../Component/CounterBox/CounterBox';
+
 import { useFoodCounter } from '../../../../../../hook/useFoodCounter';
 
 import { ISelectedContainer } from '../../../../../../lib/types';
 import { RootState } from '../../../../../../redux';
 import S from './FMcontent.styled';
+import useFMcontent from './useFMcontent';
 
-interface IFMcontent {
+export interface IFMcontent {
   selectedC: ISelectedContainer;
 }
 
 function FMcontent({ selectedC }: IFMcontent) {
-  const list = useSelector((state: RootState) => state.food);
-  const [setFoodPlus, setFoodMinus] = useFoodCounter(
-    selectedC.name,
-    selectedC.weight,
-  );
+  const { list, setFoodPlus, setFoodMinus } = useFMcontent(selectedC);
 
   return (
     <S.FMcontentWrapper>
       <S.FMcontentPhoto>{selectedC.name}</S.FMcontentPhoto>
-      <SelectBox
+      <CounterBox
         width={100}
         height={50}
         minusClick={setFoodMinus}

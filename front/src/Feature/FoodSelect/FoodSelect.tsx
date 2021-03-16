@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import FoodSelBox from './component/FoodSelBox/FoodSelBox';
 
-import LinkBox from '../../Component/LinkBox/LinkBox';
+import NavBox from '../../Component/NavBox/NavBox';
 import SelectFrame from '../../Component/SelectFrame/SelectFrame';
 
 function FoodSelect() {
   return (
-    <SelectFrame title="사용하신 용기를 골라주세요">
+    <SelectFrame title="사용하신 용기를 골라주세요" pageNum={1}>
       <FoodSelBox />
-      <LinkBox prevLink="/" nextLink="/select/distance" />
+      <NavBox prevLink="/" nextLink="/select/distance" />
     </SelectFrame>
   );
 }

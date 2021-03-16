@@ -1,6 +1,11 @@
 import axios from 'axios';
 import { IDriving } from '../lib/types';
 
+const getFakeReq = () => {
+  const response = axios.get('https://carb-miniserver.herokuapp.com/');
+  console.log('hi');
+};
+
 const getGeoCode = async (payload: string) => {
   const response = await axios.get(
     'https://carb-miniserver.herokuapp.com/api/map/geocoding',
@@ -23,6 +28,10 @@ const getDriving = async (payload: IDriving) => {
     },
   );
   return response.data;
+};
+
+export const fakeClient = {
+  getFakeReq: () => getFakeReq(),
 };
 
 export const mapClient = {

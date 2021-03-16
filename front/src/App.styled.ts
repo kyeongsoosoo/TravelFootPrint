@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { flexCenter } from './lib/css/mixin';
-import HeaderIcon from './lib/image/header.svg';
+import { flexCenter, responsiveSize } from './lib/css/mixin';
+import HeaderIcon from './lib/assets/logo/header.svg';
 
 const AppWrapper = styled.div`
   width: 100vw;
@@ -8,11 +8,12 @@ const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 `;
 
 const AppHeader = styled.header`
-  width: 100%;
-  height: 20vh;
+  ${responsiveSize(400, 150, 250, 100)}
+
   background-image: url(${HeaderIcon});
   background-repeat: no-repeat;
   background-position: center;
@@ -21,9 +22,11 @@ const AppHeader = styled.header`
 
 const AppMain = styled.main`
   display: flex;
+
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
+
   min-height: 65vh;
 `;
 
@@ -33,8 +36,10 @@ const AppFooter = styled.footer`
   width: 100%;
   height: 15vh;
   text-align: center;
+  font-size: ${({ theme }) => theme.smallFont}
   background-color: ${props => props.theme.footerColor};
   color: #ffffff;
+  letter-spacing: 1.5px;
 `;
 
 export default { AppWrapper, AppHeader, AppMain, AppFooter };

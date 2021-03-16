@@ -3,12 +3,18 @@ import S from './SelectFrame.styled';
 
 interface ISelectFrame {
   title: string;
+  pageNum?: number;
   children: React.ReactNode;
 }
 
 function SelectFrame(props: ISelectFrame) {
   return (
     <S.SelectFrameWrapper>
+      {props.pageNum && (
+        <S.SelectFrameProgressWrapper>
+          <S.SelectFrameProgressBar pageNum={props.pageNum} />
+        </S.SelectFrameProgressWrapper>
+      )}
       <S.SelectFrameTitle>{props.title}</S.SelectFrameTitle>
       {props.children}
     </S.SelectFrameWrapper>
