@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { flexCenter, responsiveSize } from '../../lib/css/mixin';
-import MainIcon from '../../lib/image/main.svg';
+import MainIcon from '../../lib/assets/logo/main.svg';
 
 const HomeWrapper = styled.div`
   display: flex;

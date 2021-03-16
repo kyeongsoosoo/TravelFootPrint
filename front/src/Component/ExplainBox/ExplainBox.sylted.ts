@@ -40,7 +40,9 @@ const ExplainItemValue = styled.h2`
 `;
 
 const ExplainItemContent = styled.h2`
-  font-size: ${({ theme }) => theme.middleFont};
+  margin-top: 5px;
+  padding: 0 10px;
+  font-size: ${({ theme }) => theme.smallFont};
 `;
 
 export default {

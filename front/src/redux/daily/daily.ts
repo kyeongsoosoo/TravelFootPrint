@@ -11,12 +11,14 @@ export type DAILY_STATE = {
 const initialState: DAILY_STATE = {};
 
 export const daily = createReducer<DAILY_STATE, DAILY_ACTION>(initialState, {
-  [DAILY_SELECT]: (state, action) => ({
-    ...state,
-    [action.payload.category]: {
-      cost: action.payload.cost,
-      name: action.payload.name,
-      category: action.payload.category,
-    },
-  }),
+  [DAILY_SELECT]: (state, action) => {
+    return {
+      ...state,
+      [action.payload.category]: {
+        cost: action.payload.cost,
+        name: action.payload.name,
+        category: action.payload.category,
+      },
+    };
+  },
 });

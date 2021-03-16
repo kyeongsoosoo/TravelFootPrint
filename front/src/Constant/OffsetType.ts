@@ -8,6 +8,7 @@ export const OffsetType: OffsetSelectType[] = [
     unit: 1,
     description:
       '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.',
+    category: '이메일 삭제',
   },
   {
     name: '이면지 사용',
@@ -16,6 +17,7 @@ export const OffsetType: OffsetSelectType[] = [
     unit: 1,
     description:
       '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.',
+    category: '이면지 사용',
   },
   {
     name: '컵 홀더 사용 안하기',
@@ -24,6 +26,7 @@ export const OffsetType: OffsetSelectType[] = [
     unit: 1,
     description:
       '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.',
+    category: '컵 홀더 사용 안하기',
   },
   {
     name: '버스 이용',
@@ -33,6 +36,7 @@ export const OffsetType: OffsetSelectType[] = [
     unit: 25,
     description:
       '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.',
+    category: '버스 이용',
   },
   {
     name: '지하철 이용',
@@ -41,6 +45,7 @@ export const OffsetType: OffsetSelectType[] = [
     unit: 25,
     description:
       '1회 당 25km로 계산하며 승용차 대신 지하철을 이용한 것을 의미합니다.',
+    category: '지하철 이용',
   },
   {
     name: '영상 스트리밍 끄기',
@@ -50,6 +55,7 @@ export const OffsetType: OffsetSelectType[] = [
     unit: 1,
     description:
       '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.',
+    category: '영상 스트리밍 끄기',
   },
   {
     name: '형광등 끄기',
@@ -58,6 +64,7 @@ export const OffsetType: OffsetSelectType[] = [
     unit: 1,
     description:
       '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.',
+    category: '형광등 끄기',
   },
   {
     name: '사용 안하는 컴퓨터 끄기',
@@ -67,5 +74,6 @@ export const OffsetType: OffsetSelectType[] = [
     unit: 1,
     description:
       '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.',
+    category: '사용 안하는 컴퓨터 끄기',
   },
 ];

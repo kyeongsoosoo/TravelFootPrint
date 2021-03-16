@@ -2,7 +2,7 @@ import { SelectType } from '../lib/types';
 import { DAILY_STATE } from '../redux/daily/daily';
 import { DISTANCE_STATE } from '../redux/distance/distance';
 import { FOOD_STATE } from '../redux/food/food';
-import { OFFSET_STATE } from '../redux/offset/offset';
+import { offset, OFFSET_STATE, OFFSET_VALUE } from '../redux/offset/offset';
 
 type FoodEntry = [
   string,
@@ -17,25 +17,32 @@ interface ITotalProp {
   getTotal: () => number;
 }
 
-// export class OffsetTotalService implements ITotalProp {
-//   constructor(private offsetList: OFFSET_STATE) {}
+export class OffsetTotalService implements ITotalProp {
+  constructor(private offsetList: OFFSET_STATE) {}
 
-//   getTotal() {
-//     const FoodEntry = getListEntry(this.offsetList);
-//     return getListTotal(FoodEntry);
-//   }
-// }
+  getTotal() {
+    const offsetObj = getListEntry(this.offsetList);
+    return getOffsetListTotal(offsetObj);
+  }
+}
+
+function getOffsetListTotal(offsetObj: [string, OFFSET_VALUE][]) {
+  return offsetObj.reduce((acc, curr) => {
+    if (typeof curr[1].cost === 'boolean') return 0;
+    return acc + curr[1].cost * curr[1].count;
+  }, 0);
+}
 
 export class FoodTotalService implements ITotalProp {
   constructor(private foodList: FOOD_STATE) {}
 
   getTotal() {
-    const FoodEntry = getFoodListEntry(this.foodList);
+    const FoodEntry = getListEntry(this.foodList);
     return getFoodListTotal(FoodEntry);
   }
 }
 
-function getFoodListEntry(ItemList: FOOD_STATE) {
+function getListEntry<T>(ItemList: T) {
   return Object.entries(ItemList);
 }
 

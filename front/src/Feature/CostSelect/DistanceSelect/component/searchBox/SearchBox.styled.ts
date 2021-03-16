@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { flexCenter } from '../../../../../lib/css/mixin';
 
 const SearchBoxWrapper = styled.section`
   display: flex;

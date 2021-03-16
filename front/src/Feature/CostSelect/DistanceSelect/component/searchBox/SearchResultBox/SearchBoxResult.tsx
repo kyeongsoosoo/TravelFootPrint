@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback } from 'react';
 import { LocationType } from '../../../../../../lib/types';
 
 import S from './SearchResultBox.styled';
@@ -19,7 +19,7 @@ function SearchBoxResult(props: TSearchBoxResult) {
   } = useAdrsResult(props);
 
   const renderSearchedList = useCallback(
-    (item, idx) => {
+    item => {
       const handleListClick = () => {
         handleItemClick(item);
       };

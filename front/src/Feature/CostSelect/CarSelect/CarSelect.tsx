@@ -4,7 +4,7 @@ import RadioBox from '../../../Component/RadioBox/RadioBox';
 import SelectFrame from '../../../Component/SelectFrame/SelectFrame';
 import { isDrivingType } from '../../../Constant/isDrivingType';
 import { PaginationInfo } from '../../../Constant/Page';
-import useTestSelect from '../FoodSelect/useFoodSelect';
+
 import useCarSelect from './useCarSelect';
 
 function CarSelect() {

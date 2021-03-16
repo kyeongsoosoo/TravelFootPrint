@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import { SelectType } from '../../lib/types';
 import S from './ExplainBox.sylted';
-import useExplainBox from './useExplainBox';
 
 type ExplainBox = {
   ItemList: SelectType[];
@@ -18,7 +17,7 @@ function ExplainBox({ ItemList }: ExplainBox) {
             <S.ExplainItemValue>{item.cost}g</S.ExplainItemValue>
           </S.ExpalinItemHeaderBox>
           {item.description && (
-            <S.ExplainItemContent>{item.cost}</S.ExplainItemContent>
+            <S.ExplainItemContent>{item.description}</S.ExplainItemContent>
           )}
         </S.ExplainItemWrapper>
       );

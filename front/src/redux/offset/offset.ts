@@ -1,20 +1,18 @@
 /* eslint-disable @typescript-eslint/indent */
 import { createReducer } from 'typesafe-actions';
+import { OffsetSelectType } from '../../lib/types';
 import {
   OFFSET_ACTION,
   OFFSET_PLUS_COUNT,
   OFFSET_MINUS_COUNT,
 } from './actions';
 
+export interface OFFSET_VALUE extends OffsetSelectType {
+  count: number;
+}
+
 export type OFFSET_STATE = {
-  [boxoffsetWay: string]: {
-    name: string;
-    cost: number | boolean;
-    description?: string;
-    unitDescription: string;
-    unit: number;
-    count: number;
-  };
+  [boxoffsetWay: string]: OFFSET_VALUE;
 };
 
 const initialState: OFFSET_STATE = {};

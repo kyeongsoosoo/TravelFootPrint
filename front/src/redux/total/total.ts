@@ -10,14 +10,14 @@ import {
 
 type TOTAL_STATE = {
   semi: number;
-  final: number;
+  final: number | null;
   travel: number;
   loading: boolean;
 };
 
 const initailState: TOTAL_STATE = {
   semi: 0,
-  final: 0,
+  final: null,
   travel: 0,
   loading: false,
 };

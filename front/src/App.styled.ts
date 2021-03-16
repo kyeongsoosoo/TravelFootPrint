@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { flexCenter, responsiveSize } from './lib/css/mixin';
-import HeaderIcon from './lib/image/header.svg';
+import HeaderIcon from './lib/assets/logo/header.svg';
 
 const AppWrapper = styled.div`
   width: 100vw;
@@ -22,7 +22,7 @@ const AppHeader = styled.header`
 
 const AppMain = styled.main`
   display: flex;
-  flex-shrink: 0;
+
   justify-content: center;
   box-sizing: border-box;
   width: 100%;

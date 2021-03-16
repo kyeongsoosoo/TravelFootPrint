@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route, Switch, useHistory } from 'react-router';
 import Home from './Feature/Home/Home';
 import S from './App.styled';
-import FoodSelect from './Feature/FoodSelect/FoodSelect';
-import Distance from './Feature/CostSelect/DistanceSelect/Distance';
-import TransSelect from './Feature/TransSelect/TransSelect';
+
 import SemiResult from './Feature/SemiResult/SemiResult';
-import OffsetSelect from './Feature/OffsetSelect/OffsetSelect';
+
 import FinalResult from './Feature/FinalResult/FinalResult';
 
 import CostSelect from './Feature/CostSelect/CostSelect';
+import Test from './Feature/Test/Test';
 
 function App() {
   const history = useHistory();
@@ -33,6 +32,7 @@ function App() {
           <Route path="/result/semi" exact component={SemiResult} />
           <Route path="/result/final" exact component={FinalResult} />
           <Route path="/" exact component={Home} />
+          <Route path="/test" exact component={Test} />
         </Switch>
       </S.AppMain>
       <Switch>

@@ -1,6 +1,7 @@
 export interface ISelectedContainer {
   name: string;
   weight: number;
+  //TODO
 }
 
 export interface ICord {
@@ -18,20 +19,17 @@ export interface IDriving {
   goal: ICord;
 }
 
-export type SelectType = {
+export interface SelectType {
   name: string;
   cost: number | boolean;
   description?: string;
-  category: SelectionCategory;
-};
+  category: SelectionCategory | OffsetCategory;
+}
 
-export type OffsetSelectType = {
-  name: string;
-  cost: number | boolean;
-  description?: string;
+export interface OffsetSelectType extends SelectType {
   unitDescription: string;
   unit: number;
-};
+}
 
 export type SelectionCategory =
   | '배달 음식'
@@ -41,6 +39,16 @@ export type SelectionCategory =
   | '스트리밍 시청하기'
   | '컴퓨터 사용하기'
   | '전구 켜놓기';
+
+export type OffsetCategory =
+  | '이메일 삭제'
+  | '이면지 사용'
+  | '컵 홀더 사용 안하기'
+  | '버스 이용'
+  | '지하철 이용'
+  | '영상 스트리밍 끄기'
+  | '형광등 끄기'
+  | '사용 안하는 컴퓨터 끄기';
 
 export type TtransportType = 'motorcycle' | 'walk/Bike';
 

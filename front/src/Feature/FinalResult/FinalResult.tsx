@@ -1,16 +1,48 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+
 import Loading from '../../Component/Loading/Loading';
 import { useGetFinal } from './useGetFinal';
-import { RootState } from '../../redux';
-import Receipt from './component/Receipt/Receipt';
-import TierBox from './component/TierBox/TierBox';
+
 import S from './FinalResult.styled';
+import { TicketService } from '../../services/TicketService';
+import TicketBox from './component/TicketBox/TicketBox';
+import Divider from '../../Component/Divider/Divider';
+import OffsetList from './component/OffsetList/OffsetList';
+import Button from '../../Component/Button/Button';
 
 function FinalResult() {
-  const { isFinished, costTotal, finalTotal, travelTotal } = useGetFinal();
+  const {
+    isFinished,
+    costTotal,
+    finalTotal,
+    ticketInfo,
+    ticketURL,
+  } = useGetFinal();
+
+  const TicketBoxProp = {
+    costTotal,
+    finalTotal,
+    ticketInfo,
+    imgURL: ticketURL,
+  };
+
   return (
-    <>{!isFinished ? <Loading /> : <S.FinalResultBox></S.FinalResultBox>}</>
+    <>
+      {!isFinished ? (
+        <Loading />
+      ) : (
+        <>
+          <S.FinalResultBox>
+            {ticketURL && <TicketBox {...TicketBoxProp} />}
+            <Divider />
+            <OffsetList />
+            <Button width={500} height={150} to="/">
+              다시하기
+            </Button>
+          </S.FinalResultBox>
+        </>
+      )}
+    </>
   );
 }
 

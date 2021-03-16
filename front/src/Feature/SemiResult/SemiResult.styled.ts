@@ -19,7 +19,7 @@ const SemiResultResultBox = styled.div`
   ${responsiveSize(400, 150, 250, 100)}
   border-radius: 20px;
   background-color: white;
-  font-size: ${({ theme }) => theme.titleSize};
+  font-size: ${({ theme }) => theme.btnFont};
   font-weight: 800;
   margin: 10px 0;
 `;
