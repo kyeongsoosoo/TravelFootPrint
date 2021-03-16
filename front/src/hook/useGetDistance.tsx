@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import useSWR from 'swr';
 import { IDriving } from '../lib/types';
@@ -10,6 +10,8 @@ export function useGetDistance() {
   const payload = useSelector((state: RootState) => state.distance);
 
   const dispatch = useDispatch();
+
+  const [delayLoading, setDelay] = useState(false);
 
   const fetchMapApi = async () => {
     if (payload.isDriving === false) {
@@ -23,6 +25,9 @@ export function useGetDistance() {
       payload.arrival,
     );
     dispatch(totalDistance(sum.distance));
+    setTimeout(() => {
+      setDelay(true);
+    }, 2000);
     return sum;
   };
 
@@ -33,7 +38,7 @@ export function useGetDistance() {
   return {
     data,
     error,
-    isLoading: isValidating,
+    isLoading: isValidating && delayLoading,
   };
 }
 

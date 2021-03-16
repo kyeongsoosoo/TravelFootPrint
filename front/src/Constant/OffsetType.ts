@@ -33,7 +33,7 @@ export const OffsetType: OffsetSelectType[] = [
     cost: 4560,
     unitDescription:
       '1회 당 25km로 계산하며 승용차 대신 버스를 이용한 것을 의미합니다.',
-    unit: 25,
+    unit: 1,
     description:
       '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.',
     category: '버스 이용',
@@ -42,7 +42,7 @@ export const OffsetType: OffsetSelectType[] = [
     name: '지하철 이용',
     cost: 5212,
     unitDescription: '단위는 통으로 하며 조회 여부는 상관 없습니다.',
-    unit: 25,
+    unit: 1,
     description:
       '1회 당 25km로 계산하며 승용차 대신 지하철을 이용한 것을 의미합니다.',
     category: '지하철 이용',
