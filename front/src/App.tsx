@@ -8,7 +8,6 @@ import SemiResult from './Feature/SemiResult/SemiResult';
 import FinalResult from './Feature/FinalResult/FinalResult';
 
 import CostSelect from './Feature/CostSelect/CostSelect';
-import Test from './Feature/Test/Test';
 
 function App() {
   const history = useHistory();
@@ -32,7 +31,6 @@ function App() {
           <Route path="/result/semi" exact component={SemiResult} />
           <Route path="/result/final" exact component={FinalResult} />
           <Route path="/" exact component={Home} />
-          <Route path="/test" exact component={Test} />
         </Switch>
       </S.AppMain>
       <Switch>
