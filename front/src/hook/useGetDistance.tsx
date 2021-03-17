@@ -25,15 +25,19 @@ export function useGetDistance() {
       payload.arrival,
     );
     dispatch(totalDistance(sum.distance));
-    setTimeout(() => {
-      setDelay(true);
-    }, 2000);
+
     return sum;
   };
 
   const { data, error, isValidating } = useSWR('getDistance', fetchMapApi, {
     revalidateOnFocus: false,
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDelay(true);
+    }, 2000);
+  }, []);
 
   return {
     data,

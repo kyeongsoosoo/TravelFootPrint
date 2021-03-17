@@ -13,7 +13,7 @@ const HomeWrapper = styled.div`
 
 const HomeIconBox = styled.section`
   ${flexCenter}
-  ${responsiveSize(425, 360, 325, 260)};
+  ${responsiveSize(425, 360, 320, 260)}
 `;
 
 const HomeIconIcon = styled.div`

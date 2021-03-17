@@ -1,23 +1,16 @@
 import styled from 'styled-components';
-import { flexCenter } from '../../lib/css/mixin';
+import { flexCenter, responsiveSize } from '../../lib/css/mixin';
 
-type SelectBoxWrapperType = {
-  width: number;
-  height: number;
-};
-
-const SelectBoxWrapper = styled.div<SelectBoxWrapperType>`
+const SelectBoxWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: ${({ width }) => `${width}%`};
-  height: ${({ height }) => `${height}%`};
+  ${responsiveSize(180, 70, 80, 50)}
 `;
 
 const SelectBoxBtn = styled.button`
   ${flexCenter}
-  width: 20%;
-  height: 70%;
+  ${responsiveSize(60, 70, 20, 50)}
   border-radius: 60%;
   border: none;
   background-color: ${props => props.theme.mainColor};
@@ -28,8 +21,7 @@ const SelectBoxBtn = styled.button`
 
 const SelectBoxResultWrapper = styled.div`
   ${flexCenter}
-  width: 30%;
-  height: 100%;
+  ${responsiveSize(60, 70, 25, 50)}
   border: 2px solid black;
   border-radius: 20%;
 `;

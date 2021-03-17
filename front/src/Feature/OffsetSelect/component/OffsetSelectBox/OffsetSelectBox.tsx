@@ -19,8 +19,6 @@ function OffsetSelectBox() {
             </S.OffsetItemTextDescript>
           </S.OffsetItemTextWrapper>
           <CounterBox
-            width={30}
-            height={50}
             minusClick={() => setOffsetMinus(item)}
             plusClick={() => setOffsetPlus(item)}
             count={OffsetList[item.name] ? OffsetList[item.name].count : 0}

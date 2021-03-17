@@ -32,7 +32,6 @@ function App() {
           <Route path="/result/semi" exact component={SemiResult} />
           <Route path="/result/final" exact component={FinalResult} />
           <Route path="/" exact component={Home} />
-          <Route path="/test" exact component={Test} />
         </Switch>
       </S.AppMain>
       <Switch>
