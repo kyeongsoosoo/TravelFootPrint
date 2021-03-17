@@ -8,7 +8,6 @@ import SemiResult from './Feature/SemiResult/SemiResult';
 import FinalResult from './Feature/FinalResult/FinalResult';
 
 import CostSelect from './Feature/CostSelect/CostSelect';
-import Test from './Feature/Test/Test';
 
 function App() {
   const history = useHistory();
