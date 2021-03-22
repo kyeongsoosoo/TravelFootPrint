@@ -70,7 +70,7 @@ module.exports = {
       template: './front/src/index.html',
       filename: 'index.html',
       templateParameters: {
-        title: 'CarbProject',
+        title: '여행의 발자국',
         env: JSON.stringify(process.env.KAKAO_APPKEY),
       },
     }),
