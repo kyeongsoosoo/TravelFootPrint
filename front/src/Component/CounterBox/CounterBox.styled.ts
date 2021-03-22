@@ -5,7 +5,8 @@ const SelectBoxWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  ${responsiveSize(180, 70, 70, 50)}
+  width: 30%;
+  height: 50%;
   /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
   @media all and (max-width: 767px) {
     max-height: 50px;
@@ -14,7 +15,8 @@ const SelectBoxWrapper = styled.div`
 
 const SelectBoxBtn = styled.button`
   ${flexCenter}
-  ${responsiveSize(40, 60, 15, 30)}
+  width: 25%;
+  height: 100%;
   /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
   @media all and (max-width: 767px) {
     
@@ -30,7 +32,9 @@ const SelectBoxBtn = styled.button`
 
 const SelectBoxResultWrapper = styled.div`
   ${flexCenter}
-  ${responsiveSize(50, 70, 25, 30)}
+  width: 30%;
+  height: 100%;
+
   border: 2px solid black;
   border-radius: 10px;
   margin: 0 4px;
