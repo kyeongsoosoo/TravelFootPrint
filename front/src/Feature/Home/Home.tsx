@@ -14,9 +14,7 @@ function Home() {
 
   return (
     <S.HomeWrapper>
-      <S.HomeIconBox>
-        <S.HomeIconIcon />
-      </S.HomeIconBox>
+      <S.HomeIconBox/>
 
       <S.HomeBtnBox>
         <Button width={390} height={100} onClick={handleLink}>

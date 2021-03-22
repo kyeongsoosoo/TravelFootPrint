@@ -14,15 +14,11 @@ const HomeWrapper = styled.div`
 const HomeIconBox = styled.div`
   ${flexCenter}
   ${responsiveSize(425, 360, 300, 260)}
-`;
-
-const HomeIconIcon = styled.div`
-  width: 100%;
-  height: 100%;
   background-image: url(${MainIcon});
   background-position: center;
   background-repeat: no-repeat;
 `;
+
 
 const HomeHookBox = styled.section`
   ${flexCenter}
@@ -43,7 +39,6 @@ const HomeBtnBox = styled.section`
 export default {
   HomeWrapper,
   HomeIconBox,
-  HomeIconIcon,
   HomeHookBox,
   HomeBtnBox,
 };
