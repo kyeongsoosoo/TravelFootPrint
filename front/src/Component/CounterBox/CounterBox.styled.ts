@@ -3,9 +3,9 @@ import { flexCenter, responsiveSize } from '../../lib/css/mixin';
 
 const SelectBoxWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  ${responsiveSize(180, 70, 80, 50)}
+  ${responsiveSize(180, 70, 70, 50)}
   /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
   @media all and (max-width: 767px) {
     max-height: 50px;
@@ -14,7 +14,7 @@ const SelectBoxWrapper = styled.div`
 
 const SelectBoxBtn = styled.button`
   ${flexCenter}
-  ${responsiveSize(40, 60, 10, 30)}
+  ${responsiveSize(40, 60, 15, 30)}
   /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
   @media all and (max-width: 767px) {
     
