@@ -3,7 +3,7 @@ import { flexCenter, responsiveSize } from '../../lib/css/mixin';
 
 const SelectBoxWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 40%;
   height: 50%;
@@ -27,9 +27,9 @@ const SelectBoxBtn = styled.button`
 
 const SelectBoxResultWrapper = styled.div`
   ${flexCenter}
-  width: 30px;
-  height: 100%;
-  flex:1;
+  ${responsiveSize(50,50,30,30)}
+  
+  
 
   border: 2px solid black;
   border-radius: 10px;
