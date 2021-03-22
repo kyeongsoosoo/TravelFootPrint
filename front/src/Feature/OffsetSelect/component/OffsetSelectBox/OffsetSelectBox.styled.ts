@@ -22,6 +22,7 @@ const OffsetSelectBox = styled.div`
 
 const OffsetItemWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 14vh;
@@ -32,7 +33,7 @@ const OffsetItemTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 70%;
   height: 100%;
 `;
 
