@@ -3,16 +3,25 @@ import { flexCenter, responsiveSize } from '../../../../../../lib/css/mixin';
 
 const SearchResultBoxWrapper = styled.div`
   ${responsiveSize(600, 600, 300, 400)}
+  @media all and (min-width: 768px) {
+    max-height: 600px;
+  }
+
+  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+  @media all and (max-width: 767px) {
+    max-height: 400px;
+  }
+  
   flex-shrink: 0;
   background-color: white;
-  overflow-y: auto;
+  overflow-y: scroll;
   cursor: pointer;
 `;
 
 const SearchResultItemWrapper = styled.article`
   display: flex;
-  width: 100%;
-  height: 20%;
+  flex-shrink: 0;
+  ${responsiveSize(600, 70, 300, 50)}
   border-top: 1px solid black;
 `;
 
