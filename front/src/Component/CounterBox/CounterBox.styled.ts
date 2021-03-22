@@ -5,7 +5,7 @@ const SelectBoxWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  width: 40%;
   height: 50%;
   /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
   @media all and (max-width: 767px) {
@@ -27,8 +27,9 @@ const SelectBoxBtn = styled.button`
 
 const SelectBoxResultWrapper = styled.div`
   ${flexCenter}
-  width: 30%;
+  width: 30px;
   height: 100%;
+  flex:1;
 
   border: 2px solid black;
   border-radius: 10px;
