@@ -21,7 +21,6 @@ const HomeIconIcon = styled.div`
   height: 100%;
   background-image: url(${MainIcon});
   background-position: center;
-  background-size: contain;
   background-repeat: no-repeat;
 `;
 
