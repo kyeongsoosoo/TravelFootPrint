@@ -22,7 +22,7 @@ function ComputerTimeSelect() {
         choices={ComputerTimeType}
         setStorage={setSelectedItem}
       ></RadioBox>
-      <LinkBox prevLink="/select/streaming" nextLink="/select/lighttime" />
+      <LinkBox prevLink="/select/streaming" nextLink="/select/isDriving" />
     </SelectFrame>
   );
 }

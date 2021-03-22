@@ -10,7 +10,7 @@ interface IButton {
   to?: string;
 }
 
-function Button(props: IButton) {
+function Button(props: IButton)  {
   const history = useHistory();
   const handleClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,

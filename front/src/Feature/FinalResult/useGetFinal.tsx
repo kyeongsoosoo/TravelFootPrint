@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { RootState } from '../../redux';
+import { resetOffset } from '../../redux/offset/actions';
 import { setFinalTotal } from '../../redux/total/action';
 import { OffsetTotalService } from '../../services/CalculService';
 import { TicketService } from '../../services/TicketService';
@@ -25,6 +26,11 @@ export function useGetFinal() {
   const finalTotal = useSelector((state: RootState) => state.total.final);
 
   const dispatch = useDispatch();
+
+  const handleRetryBtn = () => {
+    dispatch(resetOffset());
+  }
+
 
   useEffect(() => {
     const OffsetTotal = new OffsetTotalService(offsetList).getTotal();
@@ -50,5 +56,6 @@ export function useGetFinal() {
     finalTotal,
     ticketInfo,
     ticketURL,
+    handleRetryBtn
   };
 }

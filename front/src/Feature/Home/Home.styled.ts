@@ -11,9 +11,9 @@ const HomeWrapper = styled.div`
   height: 85vh;
 `;
 
-const HomeIconBox = styled.section`
+const HomeIconBox = styled.div`
   ${flexCenter}
-  ${responsiveSize(425, 360, 320, 260)}
+  ${responsiveSize(425, 360, 300, 260)}
 `;
 
 const HomeIconIcon = styled.div`

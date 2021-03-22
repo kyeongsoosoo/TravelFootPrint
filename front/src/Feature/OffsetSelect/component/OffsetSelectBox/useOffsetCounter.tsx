@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { IOffset, OffsetSelectType } from '../../../../lib/types';
+import { OffsetType } from '../../../../Constant/OffsetType';
+import { IOffset, OffsetSelectType, SelectType } from '../../../../lib/types';
 import { RootState } from '../../../../redux';
 import {
   minusOffsetCount,
@@ -8,6 +9,13 @@ import {
 
 export function useOffsetCount() {
   const OffsetList = useSelector((state: RootState) => state.offset);
+
+  const DailyList = useSelector((state:RootState) => state.daily);
+
+  const DailyValueList = Object.values(DailyList).map(item => item.category);
+
+  const OffsetQuestion = OffsetType.filter((item:OffsetSelectType) => DailyValueList.includes(item.category));
+
 
   const dispatch = useDispatch();
   const setOffsetPlus = (offset: OffsetSelectType) => {
@@ -21,5 +29,6 @@ export function useOffsetCount() {
     OffsetList,
     setOffsetMinus,
     setOffsetPlus,
+    OffsetQuestion
   };
 }

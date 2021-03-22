@@ -2,7 +2,7 @@ import { SelectType } from '../lib/types';
 
 export const CoffeType: SelectType[] = [
   {
-    name: '안마셔요',
+    name: '안마셔요!',
     cost: 0,
     category: '커피 마시기',
   },
@@ -25,7 +25,7 @@ export const CoffeType: SelectType[] = [
 
 export const MeetType: SelectType[] = [
   {
-    name: '안먹었어요',
+    name: '안먹었어요!',
     cost: 0,
     category: '고기 먹기',
   },
@@ -48,7 +48,7 @@ export const MeetType: SelectType[] = [
 
 export const StreamingType: SelectType[] = [
   {
-    name: '안봤어요',
+    name: '안봤어요!',
     cost: 0,
     category: '스트리밍 시청하기',
   },
@@ -92,28 +92,28 @@ export const ComputerTimeType: SelectType[] = [
   },
 ];
 
-export const LightTimeType: SelectType[] = [
-  {
-    name: '켜두지 않았어요',
-    cost: 0,
-    category: '전구 켜놓기',
-  },
-  {
-    name: '1시간',
-    cost: 34,
-    category: '전구 켜놓기',
-  },
-  {
-    name: '2시간',
-    cost: 68,
-    category: '전구 켜놓기',
-  },
-  {
-    name: '3시간 이상',
-    cost: 102,
-    category: '전구 켜놓기',
-  },
-];
+// export const LightTimeType: SelectType[] = [
+//   {
+//     name: '켜두지 않았어요!',
+//     cost: 0,
+//     category: '전구 켜놓기',
+//   },
+//   {
+//     name: '1시간',
+//     cost: 34,
+//     category: '전구 켜놓기',
+//   },
+//   {
+//     name: '2시간',
+//     cost: 68,
+//     category: '전구 켜놓기',
+//   },
+//   {
+//     name: '3시간 이상',
+//     cost: 102,
+//     category: '전구 켜놓기',
+//   },
+// ];
 
 // List 창
 

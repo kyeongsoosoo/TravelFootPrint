@@ -10,7 +10,7 @@ const SelectBoxWrapper = styled.div`
 
 const SelectBoxBtn = styled.button`
   ${flexCenter}
-  ${responsiveSize(60, 70, 20, 50)}
+  ${responsiveSize(40, 60, 20, 40)}
   border-radius: 60%;
   border: none;
   background-color: ${props => props.theme.mainColor};
@@ -20,10 +20,12 @@ const SelectBoxBtn = styled.button`
 `;
 
 const SelectBoxResultWrapper = styled.div`
+  
   ${flexCenter}
-  ${responsiveSize(60, 70, 25, 50)}
+  ${responsiveSize(50, 70, 20, 40)}
   border: 2px solid black;
   border-radius: 20%;
+  margin: 0 4px;
 `;
 
 export default {

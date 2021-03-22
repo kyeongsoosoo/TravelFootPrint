@@ -17,6 +17,7 @@ function FinalResult() {
     finalTotal,
     ticketInfo,
     ticketURL,
+    handleRetryBtn
   } = useGetFinal();
 
   const TicketBoxProp = {
@@ -36,7 +37,7 @@ function FinalResult() {
             {ticketURL && <TicketBox {...TicketBoxProp} />}
             <Divider />
             <OffsetList />
-            <Button width={500} height={150} to="/">
+            <Button width={500} height={150} to="/" onClick={handleRetryBtn}>
               다시하기
             </Button>
           </S.FinalResultBox>
