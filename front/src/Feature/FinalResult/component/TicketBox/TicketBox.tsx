@@ -21,12 +21,12 @@ function TicketBox({
       {imgURL && (
         <S.TicketImage imgURL={imgURL}>
           <S.TicketImageTravelText>
-            <S.TravelTextValue>{finalTotal}</S.TravelTextValue>
+            <S.TravelTextValue>{finalTotal}g</S.TravelTextValue>
             <S.TravelTextName>여행발자국</S.TravelTextName>
           </S.TicketImageTravelText>
           <S.TicketImageCostText>
             <S.TravelTextName>사용 탄소발자국</S.TravelTextName>
-            <S.TravelTextValue>{costTotal}</S.TravelTextValue>
+            <S.TravelTextValue>{costTotal}g</S.TravelTextValue>
           </S.TicketImageCostText>
         </S.TicketImage>
       )}
@@ -34,7 +34,7 @@ function TicketBox({
         <>
           <S.TicketTitle>{ticketInfo[0]}</S.TicketTitle>
           <S.TicketDescript>
-            <p style={{ color: '#8ED04C', display: 'inline' }}>{finalTotal}</p>
+            <p style={{ color: '#8ED04C', display: 'inline' }}>{finalTotal}g</p>
             을 줄인 당신,
             <br />
           </S.TicketDescript>

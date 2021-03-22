@@ -5,6 +5,7 @@ import {
   OFFSET_ACTION,
   OFFSET_PLUS_COUNT,
   OFFSET_MINUS_COUNT,
+  OFFSET_RESET,
 } from './actions';
 
 export interface OFFSET_VALUE extends OffsetSelectType {
@@ -23,7 +24,7 @@ export const offset = createReducer<OFFSET_STATE, OFFSET_ACTION>(initialState, {
     [action.payload.name]: state.hasOwnProperty(`${action.payload.name}`)
       ? {
           ...action.payload,
-          count: state[action.payload.name].count + 1,
+          count: state[action.payload.name].count + action.payload.unit,
         }
       : {
           ...action.payload,
@@ -44,4 +45,6 @@ export const offset = createReducer<OFFSET_STATE, OFFSET_ACTION>(initialState, {
             count: 0,
           },
   }),
+  [OFFSET_RESET] : () => ({})
+
 });

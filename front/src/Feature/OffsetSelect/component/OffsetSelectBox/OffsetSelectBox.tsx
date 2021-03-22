@@ -6,7 +6,7 @@ import CounterBox from '../../../../Component/CounterBox/CounterBox';
 import { OffsetType } from '../../../../Constant/OffsetType';
 
 function OffsetSelectBox() {
-  const { OffsetList, setOffsetMinus, setOffsetPlus } = useOffsetCount();
+  const { OffsetList, setOffsetMinus, setOffsetPlus, OffsetQuestion } = useOffsetCount();
 
   const renderOffsetItem = useCallback(
     (item: OffsetSelectType) => {
@@ -30,7 +30,7 @@ function OffsetSelectBox() {
   );
 
   return (
-    <S.OffsetSelectBox>{OffsetType.map(renderOffsetItem)}</S.OffsetSelectBox>
+    <S.OffsetSelectBox>{OffsetQuestion.map(renderOffsetItem)}</S.OffsetSelectBox>
   );
 }
 

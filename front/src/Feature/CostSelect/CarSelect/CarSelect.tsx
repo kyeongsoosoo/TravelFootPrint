@@ -17,7 +17,7 @@ function CarSelect() {
     >
       <RadioBox choices={isDrivingType} setStorage={checkIsDriving}></RadioBox>
       <LinkBox
-        prevLink="/select/lighttime"
+        prevLink="/select/computertime"
         nextLink={isDriving ? '/select/driving' : '/result/semi'}
       />
     </SelectFrame>

@@ -21,7 +21,7 @@ function Home() {
       <S.HomeBtnBox>
         <Button width={390} height={100} onClick={handleLink}>
           <p style={{ fontSize: '32px', fontWeight: 800, margin: 0 }}>
-            계산하기
+            시작하기
           </p>
         </Button>
       </S.HomeBtnBox>

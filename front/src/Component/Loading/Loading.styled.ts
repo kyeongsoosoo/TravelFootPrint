@@ -47,6 +47,7 @@ const LoadingTextBox = styled.div`
   height: 80%;
   background-color: white;
   border-radius: 15px;
+  margin-top: 10px;
 `;
 
 export default {

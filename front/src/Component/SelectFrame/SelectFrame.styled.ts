@@ -12,7 +12,7 @@ const SelectFrameWrapper = styled.main`
   flex-direction: column;
   width: 100%;
   min-height: 80vh;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 `;
 
 const SelectFrameProgressWrapper = styled.div`
