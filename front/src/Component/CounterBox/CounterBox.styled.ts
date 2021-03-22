@@ -15,13 +15,8 @@ const SelectBoxWrapper = styled.div`
 
 const SelectBoxBtn = styled.button`
   ${flexCenter}
-  width: 25%;
+  width: 20%;
   height: 100%;
-  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
-  @media all and (max-width: 767px) {
-    
-    max-height: 30px;
-  }
   border-radius: 20px;
   border: none;
   background-color: ${props => props.theme.mainColor};
