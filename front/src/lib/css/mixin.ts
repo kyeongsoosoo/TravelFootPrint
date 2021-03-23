@@ -32,13 +32,14 @@ export const fontSizing = (
   fontWeight: number,
 ) => {
   return css`
+
     /* PC (해상도 1024px)*/
     @media all and (min-width: 1024px) {
       font-size: ${pcSize}px;
     }
 
     /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
-    @media all and (min-width: 768px) and (max-width: 1023px) {
+    @media all and (min-width: 768px) {
       font-size: ${tabletSize}px;
     }
 

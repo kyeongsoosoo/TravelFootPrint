@@ -5,7 +5,6 @@ import SelectFrame from '../../../Component/SelectFrame/SelectFrame';
 import { PaginationInfo } from '../../../Constant/Page';
 
 import SearchBox from './component/searchBox/SearchBox';
-import S from './Distance.styled';
 
 function Distance() {
   return (

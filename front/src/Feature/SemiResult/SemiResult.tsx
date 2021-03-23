@@ -10,11 +10,11 @@ import ExplainBox from '../../Component/ExplainBox/ExplainBox';
 
 function SemiResult() {
   const { data, error, isLoading } = useGetDistance();
-  const { food, distance, daily, sum } = useGetSemi();
+  const { food, distance, daily, sum, isSemiLoading } = useGetSemi();
 
   return (
     <>
-      {isLoading ? (
+      {(isLoading || isSemiLoading) ? (
         <Loading />
       ) : (
         <S.SemiResultWrapper>

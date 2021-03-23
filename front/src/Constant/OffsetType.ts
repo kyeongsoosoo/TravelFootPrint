@@ -25,7 +25,7 @@ export const OffsetType: OffsetSelectType[] = [
     unitDescription: '단위는 1인분으로 하며 1인분은 100g 입니다.',
     unit: 1,
     description:
-      '아메리카노 한잔은 21g, 우유가 들어가는 카푸치노의 경우 235g의 탄소발자국이 배출됩니다. ',
+      '육류는 평균 식사에서 배출되는 탄소의 56.6%를 차지하며 소와 양의 가축은 추가적으로 메탄을 배출하기도 합니다.',
     category: '고기 먹기',
   },
 

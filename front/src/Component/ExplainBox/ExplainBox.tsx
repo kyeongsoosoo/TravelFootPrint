@@ -1,20 +1,26 @@
 import React, { useCallback } from 'react';
 import { SelectType } from '../../lib/types';
+import { OFFSET_VALUE } from '../../redux/offset/offset';
 import S from './ExplainBox.sylted';
 
 type ExplainBox = {
-  ItemList: SelectType[];
+  ItemList: SelectType[] | OFFSET_VALUE[] ;
 };
+
+function isOffsetItem(item: ExplainBox['ItemList'][0]) : item is OFFSET_VALUE {
+  
+  return item.hasOwnProperty('unit')
+}
 
 function ExplainBox({ ItemList }: ExplainBox) {
   const renderExplainItem = useCallback(
-    (item: SelectType) => {
+    (item: SelectType | OFFSET_VALUE) => {
       return (
         <S.ExplainItemWrapper key={item.name}>
           {console.log(item)}
           <S.ExpalinItemHeaderBox>
             <S.ExplainItemTitle>{item.category}</S.ExplainItemTitle>
-            <S.ExplainItemValue>{item.cost}g</S.ExplainItemValue>
+            <S.ExplainItemValue>{'unit' in item  ? item.cost as number * item.unit : item.cost }g</S.ExplainItemValue>
           </S.ExpalinItemHeaderBox>
           {item.description && (
             <S.ExplainItemContent>{item.description}</S.ExplainItemContent>
