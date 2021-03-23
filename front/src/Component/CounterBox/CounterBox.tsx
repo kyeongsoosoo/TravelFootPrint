@@ -12,11 +12,11 @@ interface ISelectBox {
 function CounterBox(props: ISelectBox) {
   return (
     <S.SelectBoxWrapper>
-      <Button width={50} height={50} onClick={props.minusClick}><S.SelectBoxMinus/></Button>
+      <Button width={50} height={50} onClick={props.minusClick}>&#45;</Button>
       {/* <S.SelectBoxBtn onClick={props.minusClick}>-</S.SelectBoxBtn> */}
       <S.SelectBoxResultWrapper>{props.count}</S.SelectBoxResultWrapper>
       {/* <S.SelectBoxBtn onClick={props.plusClick}>+</S.SelectBoxBtn> */}
-      <Button width={50} height={50} onClick={props.plusClick}><S.SelectBoxPlus/></Button>
+      <Button width={50} height={50} onClick={props.plusClick}>	&#43;</Button>
     </S.SelectBoxWrapper>
   );
 }

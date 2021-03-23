@@ -11,7 +11,7 @@ export function useGetDistance() {
 
   const dispatch = useDispatch();
 
-  const [delayLoading, setDelay] = useState(false);
+  const [delayLoading, setDelay] = useState(true);
 
   const fetchMapApi = async () => {
     if (payload.isDriving === false) {
@@ -29,20 +29,21 @@ export function useGetDistance() {
     return sum;
   };
 
-  const { data, error, isValidating } = useSWR('getDistance', fetchMapApi, {
+  const { data, error } = useSWR('getDistance', fetchMapApi, {
     revalidateOnFocus: false,
   });
 
+
   useEffect(() => {
     setTimeout(() => {
-      setDelay(true);
+      setDelay(false);
     }, 2000);
   }, []);
 
   return {
     data,
     error,
-    isLoading: isValidating && delayLoading,
+    isLoading: delayLoading,
   };
 }
 

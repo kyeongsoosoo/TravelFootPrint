@@ -18,7 +18,7 @@ const SearchInputWrapper = styled.div`
   ${flexCenter}
   flex-shrink: 0;
   flex-direction: column;
-  ${responsiveSize(600, 100, 300, 50)}
+  ${responsiveSize(600, 70, 300, 50)}
 `;
 
 const SearchInputInp = styled.input`
