@@ -38,7 +38,7 @@ export const offset = createReducer<OFFSET_STATE, OFFSET_ACTION>(initialState, {
       state[action.payload.name].count > 0
         ? {
             ...action.payload,
-            count: state[action.payload.name].count - 1,
+            count: state[action.payload.name].count - action.payload.unit,
           }
         : {
             ...action.payload,
