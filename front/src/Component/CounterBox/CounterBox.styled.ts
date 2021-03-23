@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { flexCenter, responsiveSize } from '../../lib/css/mixin';
+import {HiMinus,HiPlus} from 'react-icons/hi'
 
 const SelectBoxWrapper = styled.div`
   display: flex;
@@ -36,10 +37,28 @@ const SelectBoxResultWrapper = styled.div`
   margin: 0 4px;
 `;
 
+const SelectBoxMinus = styled(HiMinus)`
+  font-size: 30px;
+
+@media only screen and (max-width: 768px) {
+  font-size: 12px;
+}
+`;
+
+
+const SelectBoxPlus = styled(HiPlus)`
+font-size: 30px;
+
+@media only screen and (max-width: 768px) {
+  font-size: 12px;
+}`;
+
 export default {
   SelectBoxWrapper,
   SelectBoxBtn,
   SelectBoxResultWrapper,
+  SelectBoxMinus,
+  SelectBoxPlus
 };
 
 

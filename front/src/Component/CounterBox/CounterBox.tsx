@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button/Button';
 import S from './CounterBox.styled';
-import {HiMinus,HiPlus} from 'react-icons/hi'
+
 
 interface ISelectBox {
   plusClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
@@ -12,11 +12,11 @@ interface ISelectBox {
 function CounterBox(props: ISelectBox) {
   return (
     <S.SelectBoxWrapper>
-      <Button width={50} height={50} onClick={props.minusClick}><HiMinus/></Button>
+      <Button width={50} height={50} onClick={props.minusClick}><S.SelectBoxMinus/></Button>
       {/* <S.SelectBoxBtn onClick={props.minusClick}>-</S.SelectBoxBtn> */}
       <S.SelectBoxResultWrapper>{props.count}</S.SelectBoxResultWrapper>
       {/* <S.SelectBoxBtn onClick={props.plusClick}>+</S.SelectBoxBtn> */}
-      <Button width={50} height={50} onClick={props.plusClick}><HiPlus/></Button>
+      <Button width={50} height={50} onClick={props.plusClick}><S.SelectBoxPlus/></Button>
     </S.SelectBoxWrapper>
   );
 }

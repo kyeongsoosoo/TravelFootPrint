@@ -6,7 +6,7 @@ const FinalResultBox = styled.div`
   align-items: center;
   width: 80vw;
   min-height: 70vh;
-  margin-bottom: 3vh;
+  margin-bottom: 10vh;
 `;
 
 export default {

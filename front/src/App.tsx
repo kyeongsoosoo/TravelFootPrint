@@ -44,11 +44,22 @@ function App() {
               <p style={{ margin: 0 }}>Designed by Doyoon Lee</p>
               <br />
               <p style={{ margin: 0 }}>
-                Copyright &copy; 2021 탄소의 민족 All Rights Reserved
+                Copyright &copy; 2021 여행의 발자국 All Rights Reserved
               </p>
             </S.AppFooter>
           )}
         />
+        <Route path="/result/final" exact render={() => (
+          <S.AppFooter>
+            <p style={{ margin: 0 }}>Directed by Dongwook Kim</p>
+            <p style={{ margin: 0 }}>Developed by Kyeongsoo Kim</p>
+            <p style={{ margin: 0 }}>Designed by Doyoon Lee</p>
+            <br />
+            <p style={{ margin: 0 }}>
+                Copyright &copy; 2021 여행의 발자국 All Rights Reserved
+            </p>
+          </S.AppFooter>
+        )} />
       </Switch>
     </S.AppWrapper>
   );
