@@ -19,17 +19,17 @@ const HomeIconBox = styled.div`
   background-repeat: no-repeat;
 `;
 
-
 const HomeHookBox = styled.section`
-  ${flexCenter}
+  display: flex;
   flex-direction: column;
-  width: 70vw;
-  max-width: 500px;
-  height: 15vh;
-  ${props => props.theme.smallFont}
+  align-items: center;
+
+  ${responsiveSize(425, 50, 300, 30)}
+  text-algin: center;
+  ${props => props.theme.btnFont}
   letter-spacing: 0.2px;
   line-height: 1.3;
-  margin: 20px 0px;
+  margin: 10px 0px;
 `;
 
 const HomeBtnBox = styled.section`

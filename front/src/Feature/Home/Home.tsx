@@ -14,7 +14,12 @@ function Home() {
 
   return (
     <S.HomeWrapper>
-      <S.HomeIconBox/>
+      <S.HomeIconBox />
+      <S.HomeHookBox>
+        <p>일상 속 탄소발자국을 알아보고,</p>
+
+        <p>줄인 발자국만큼 여행을 떠나봅시다!</p>
+      </S.HomeHookBox>
 
       <S.HomeBtnBox>
         <Button width={390} height={100} onClick={handleLink}>

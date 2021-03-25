@@ -70,6 +70,9 @@ const TicketTitle = styled.div`
 
 //   ${responsiveSize(400, 300, 250, 200)}
 const TicketDescript = styled.div`
+  white-space: pre;
+  line-height: 1.2em;
+  ${flexCenter}
   ${responsiveSize(500, 0, 250, 0)}
   text-align: center;
   font-size: ${({ theme }) => theme.middleFont};
