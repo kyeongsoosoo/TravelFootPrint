@@ -40,6 +40,7 @@ const LoadingText = styled.h1`
 
 const LoadingTextBox = styled.div`
   ${flexCenter}
+  flex-wrap: 1;
   text-align: center;
   ${props => props.theme.middleSize}
   font-weight: 600;

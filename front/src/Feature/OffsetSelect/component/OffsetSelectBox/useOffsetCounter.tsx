@@ -12,15 +12,20 @@ export function useOffsetCount() {
 
   const DailyList = useSelector((state:RootState) => state.daily);
 
-  const DrivingCost = useSelector((state:RootState) => state.distance.total);
+  const DrivingList = useSelector((state:RootState) => state.distance);
 
   const DailyValueList = Object.values(DailyList).map(item => item.category);
 
   const OffsetQuestion = OffsetType.filter((item:OffsetSelectType) => DailyValueList.includes(item.category));
 
-  const DrvingCheckedQuestion = (DrivingCost ? OffsetQuestion.map(item => {
+  if(DrivingList.isDriving){
+    OffsetQuestion.push(OffsetType.find(item => item.category === 'isDriving') || OffsetType[0]);
+  }
+
+
+  const DrvingCheckedQuestion = (DrivingList.total ? OffsetQuestion.map(item => {
     if(item.category === 'isDriving')
-      item.cost = parseInt(DrivingCost,10);
+      item.cost = parseInt(DrivingList.total || '0',10);
     return item;
   }) 
     : OffsetQuestion

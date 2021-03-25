@@ -33,6 +33,7 @@ const OffsetItemTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: 1;
   width: 60%;
   height: 100%;
 `;

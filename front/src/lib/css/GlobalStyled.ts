@@ -20,6 +20,8 @@ export const GlobalStyle = createGlobalStyle`
         opacity: 0.9;
         width: 100%;
         min-height: 100%;
+        word-break: keep-all;
+        white-space:pre-wrap;
     }
 
     main{
