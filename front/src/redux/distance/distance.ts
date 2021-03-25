@@ -5,6 +5,7 @@ import {
   DISTANCE_ARRIVE,
   DISTANCE_DEPARTURE,
   DISTANCE_ISDRIVING,
+  DISTANCE_RESET,
   DISTANCE_TOTAL,
   DISTANCE_TRANSPORT,
 } from './action';
@@ -14,7 +15,6 @@ export type DISTANCE_STATE = {
   departure: ICord | null;
   arrival: ICord | null;
   total: string | null;
-  transport: TtransportType;
 };
 
 const initialState: DISTANCE_STATE = {
@@ -22,7 +22,6 @@ const initialState: DISTANCE_STATE = {
   departure: null,
   arrival: null,
   total: null,
-  transport: 'motorcycle',
 };
 
 export const distance = createReducer<DISTANCE_STATE, DISTANCE_ACTION>(
@@ -51,5 +50,8 @@ export const distance = createReducer<DISTANCE_STATE, DISTANCE_ACTION>(
       ...state,
       transport: action.payload,
     }),
+    [DISTANCE_RESET]: () => {
+      return initialState;
+    },
   },
 );

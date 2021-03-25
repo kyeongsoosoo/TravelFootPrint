@@ -4,28 +4,28 @@ export const OffsetType: OffsetSelectType[] = [
   {
     name: '이메일 삭제',
     cost: 45,
-    unitDescription: '단위는 통으로 하며\n 조회 여부는 상관 없습니다.',
+    unitDescription: '단위는 통으로 하며 조회 여부는 상관 없습니다.',
     unit: 50,
     description:
-      '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 \n냉각장치가 24시간 가동됩니다.',
+      '데이터 보관 센터네는 1GB당 32kWh의 전력을 사용하는 냉각장치가 24시간 가동됩니다.',
     category: '이메일 삭제',
   },
   {
     name: '커피 한잔 덜 마시기',
     cost: 21,
-    unitDescription: '단위는 한 잔으로 하며 \n아메리카노를 기준으로 합니다.',
+    unitDescription: '단위는 한 잔으로 하며 아메리카노를 기준으로 합니다.',
     unit: 1,
     description:
-      '아메리카노 한잔은 21g,\n 우유가 들어가는 카푸치노의 경우 235g의 탄소발자국이 배출됩니다. ',
+      '아메리카노 한잔은 21g, 우유가 들어가는 카푸치노의 경우 235g의 탄소발자국이 배출됩니다. ',
     category: '커피 마시기',
   },
   {
     name: '고기 한번 덜 먹기 ',
-    cost: 6,
+    cost: 668,
     unitDescription: '단위는 1인분으로 하며 1인분은 100g 입니다.',
     unit: 1,
     description:
-      '육류는 평균 식사에서 배출되는 탄소의 56.6%를 차지하며\n 소와 양의 가축은 추가적으로 메탄을 배출하기도 합니다.',
+      '육류는 평균 식사에서 배출되는 탄소의 56.6%를 차지하며 소와 양의 가축은 추가적으로 메탄을 배출하기도 합니다.',
     category: '고기 먹기',
   },
 

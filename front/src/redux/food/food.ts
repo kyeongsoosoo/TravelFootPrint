@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/indent */
 import { createReducer } from 'typesafe-actions';
-import { FOOD_ACTION, FOOD_TOGGLE } from './action';
+import { FOOD_ACTION, FOOD_RESET, FOOD_TOGGLE } from './action';
 
 export type FOOD_STATE = {
   [boxName: string]: {
@@ -30,5 +30,8 @@ export const food = createReducer<FOOD_STATE, FOOD_ACTION>(initialState, {
               cost: foodCost,
             },
       };
+  },
+  [FOOD_RESET]: () => {
+    return {};
   },
 });
