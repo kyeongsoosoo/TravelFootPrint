@@ -3,6 +3,7 @@ import {
   TOTAL_ACTION,
   TOTAL_FINAL,
   TOTAl_FINISH,
+  TOTAL_RESET,
   TOTAL_SEMI,
   TOTAL_START,
   TOTAL_TRAVEL,
@@ -43,4 +44,7 @@ export const total = createReducer<TOTAL_STATE, TOTAL_ACTION>(initailState, {
     ...state,
     travel: action.payload,
   }),
+  [TOTAL_RESET]: () => {
+    return initailState;
+  },
 });

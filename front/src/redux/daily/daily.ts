@@ -2,7 +2,7 @@
 import { createReducer } from 'typesafe-actions';
 
 import { SelectType } from '../../lib/types';
-import { DAILY_ACTION, DAILY_SELECT } from './action';
+import { DAILY_ACTION, DAILY_RESET, DAILY_SELECT } from './action';
 
 export type DAILY_STATE = {
   [dailyName: string]: SelectType;
@@ -20,5 +20,8 @@ export const daily = createReducer<DAILY_STATE, DAILY_ACTION>(initialState, {
         category: action.payload.category,
       },
     };
+  },
+  [DAILY_RESET]: () => {
+    return {};
   },
 });
