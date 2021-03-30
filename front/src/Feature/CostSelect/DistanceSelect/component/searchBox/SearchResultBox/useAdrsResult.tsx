@@ -1,35 +1,35 @@
-import { useDispatch, useSelector } from 'react-redux';
-import useSWR from 'swr';
-import { RootState } from '../../../../../../redux';
+import { useDispatch, useSelector } from "react-redux";
+import useSWR from "swr";
+import { RootState } from "../../../../../../redux";
 import {
   departureCord,
   arriveCord,
-} from '../../../../../../redux/distance/action';
-import { getLoacaData } from '../../../../../../redux/location/action';
+} from "../../../../../../redux/distance/action";
+import { getLoacaData } from "../../../../../../redux/location/action";
 
-import { PlaceService } from '../../../../../../services/SearchService';
-import { TSearchBoxResult } from './SearchBoxResult';
+import { PlaceService } from "../../../../../../services/SearchService";
+import { TSearchBoxResult } from "./SearchBoxResult";
 
 export function useAdrsResult({
   setInput,
-  searchKey = '안암',
+  searchKey = "안암",
   type,
 }: TSearchBoxResult) {
   const PS = PlaceService();
 
   const SearchedList = useSelector(
-    (state: RootState) => state.location.locationData,
+    (state: RootState) => state.location.locationData
   );
 
   const dispatch = useDispatch();
 
-  const { data, mutate } = useSWR('address/result', async () => {
+  const { data, mutate } = useSWR("address/result", async () => {
     try {
       await PS.keywordSearch(searchKey, (data: unknown) => {
         dispatch(getLoacaData(data));
       });
     } catch (e) {
-      dispatch(getLoacaData('ERROR'));
+      dispatch(getLoacaData("ERROR"));
     }
   });
 
