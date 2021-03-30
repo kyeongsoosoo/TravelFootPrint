@@ -11,7 +11,7 @@ const ButtonWrapper = styled.button<IButtonWrapper>`
     responsiveSize(width, height, width / 1.5, height / 1.5)};
   ${flexCenter}
   background-color: ${props => props.theme.mainColor};
-  border-radius: 20px;
+  border-radius: 15px;
   ${props => props.theme.btnFont}
   cursor: pointer;
 
