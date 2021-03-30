@@ -42,7 +42,11 @@ function SearchBoxResult(props: TSearchBoxResult) {
 
   return (
     <S.SearchResultBoxWrapper>
-      {SearchedList ? SearchedList.map(renderSearchedList) : <div>Hi</div>}
+      {SearchedList !== 'ERROR' && SearchedList ? (
+        SearchedList.map(renderSearchedList)
+      ) : (
+        <div>다시 입력해주세요.</div>
+      )}
     </S.SearchResultBoxWrapper>
   );
 }

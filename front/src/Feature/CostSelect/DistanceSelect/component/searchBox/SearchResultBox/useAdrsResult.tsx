@@ -24,9 +24,13 @@ export function useAdrsResult({
   const dispatch = useDispatch();
 
   const { data, mutate } = useSWR('address/result', async () => {
-    await PS.keywordSearch(searchKey, (data: unknown) => {
-      dispatch(getLoacaData(data));
-    });
+    try {
+      await PS.keywordSearch(searchKey, (data: unknown) => {
+        dispatch(getLoacaData(data));
+      });
+    } catch (e) {
+      dispatch(getLoacaData('ERROR'));
+    }
   });
 
   const handleItemClick = (item: any) => {
