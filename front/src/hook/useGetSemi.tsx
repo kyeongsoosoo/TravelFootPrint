@@ -11,7 +11,6 @@ import {
 } from '../services/CalculService';
 
 function useGetSemi() {
-
   const dispatch = useDispatch();
 
   const [delayLoading, setDelay] = useState(true);
@@ -26,25 +25,20 @@ function useGetSemi() {
   };
 
   useEffect(() => {
-    if(distance.isDriving && distance.total === '0'){
-
-    }
-    else{
-
-      
+    if (distance.isDriving && distance.total === '0') {
+    } else {
       const calcedFood = new FoodTotalService(food).getTotal();
       const calcedDistance = distance.total
         ? new DistanceTotalService(distance).getTotal()
         : 0;
       const calcedDaily = new DailyTotalService(daily).getTotal();
       const result = calcedDistance + calcedFood + calcedDaily;
-        
-        
+
       dispatch(setSemiTotal(result));
       setSum(result);
       setDelay(false);
     }
-  },[distance])
+  }, [distance]);
 
   return {
     food,
