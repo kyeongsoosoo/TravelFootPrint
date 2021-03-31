@@ -32,25 +32,25 @@ export interface OffsetSelectType extends SelectType {
 }
 
 export type SelectionCategory =
-  | '배달 음식'
-  | 'isDriving'
-  | '커피 마시기'
-  | '고기 먹기'
-  | '스트리밍 시청하기'
-  | '컴퓨터 사용하기'
-  | '전구 켜놓기';
+  | "배달 음식"
+  | "isDriving"
+  | "커피 마시기"
+  | "고기 먹기"
+  | "스트리밍 시청하기"
+  | "컴퓨터 사용하기"
+  | "전구 켜놓기";
 
 export type OffsetCategory =
-  | '이메일 삭제'
-  | '이면지 사용'
-  | '컵 홀더 사용 안하기'
-  | '버스 이용'
-  | '지하철 이용'
-  | '영상 스트리밍 끄기'
-  | '형광등 끄기'
-  | '사용 안하는 컴퓨터 끄기';
+  | "이메일 삭제"
+  | "이면지 사용"
+  | "컵 홀더 사용 안하기"
+  | "버스 이용"
+  | "지하철 이용"
+  | "영상 스트리밍 끄기"
+  | "형광등 끄기"
+  | "사용 안하는 컴퓨터 끄기";
 
-export type TtransportType = 'motorcycle' | 'walk/Bike';
+export type TtransportType = "motorcycle" | "walk/Bike";
 
 export interface IOffset {
   offsetWay: string;
