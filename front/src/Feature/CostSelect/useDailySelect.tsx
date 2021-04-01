@@ -1,7 +1,7 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { SelectType } from '../lib/types';
-import { setSelection } from '../redux/daily/action';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { SelectType } from "../../lib/types";
+import { setSelection } from "../../redux/daily/action";
 
 function useDailySelect() {
   const dispatch = useDispatch();

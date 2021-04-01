@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { SelectType } from '../lib/types';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { SelectType } from "../../lib/types";
 
-import { RootState } from '../redux';
-import { setSemiTotal } from '../redux/total/action';
+import { RootState } from "../../redux";
+import { setSemiTotal } from "../../redux/total/action";
 import {
   DailyTotalService,
   DistanceTotalService,
   FoodTotalService,
-} from '../services/CalculService';
+} from "../../services/CalculService";
 
 function useGetSemi() {
   const dispatch = useDispatch();
 
   const [delayLoading, setDelay] = useState(true);
   const [sum, setSum] = useState(0);
+  const [costList, setList] = useState<SelectType[]>([]);
 
   const food = useSelector((state: RootState) => state.food);
   const distance = useSelector((state: RootState) => state.distance);
@@ -25,7 +26,7 @@ function useGetSemi() {
   };
 
   useEffect(() => {
-    if (distance.isDriving && distance.total === '0') {
+    if (distance.isDriving && distance.total === "0") {
     } else {
       const calcedFood = new FoodTotalService(food).getTotal();
       const calcedDistance = distance.total
@@ -34,16 +35,29 @@ function useGetSemi() {
       const calcedDaily = new DailyTotalService(daily).getTotal();
       const result = calcedDistance + calcedFood + calcedDaily;
 
+      const distanceList: SelectType = {
+        name: "자동차 타기",
+        cost: calcedDistance,
+        category: "자동차 타기",
+      };
+      const foodList = convertToSelectType(food);
+      const dailyList = convertToSelectType(daily);
+
+      const temArr: SelectType[] = [];
+
+      setList(temArr.concat(foodList, dailyList));
+      if (calcedDistance > 0) setList(costList.concat(distanceList));
+
       dispatch(setSemiTotal(result));
       setSum(result);
-      setDelay(false);
+      setTimeout(() => setDelay(false), 2000);
     }
   }, [distance]);
 
   return {
     food,
     distance,
-    daily: convertToSelectType(daily),
+    daily: costList,
     isSemiLoading: delayLoading,
     sum,
   };
