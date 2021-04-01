@@ -1,14 +1,14 @@
-import React from 'react';
-import LinkBox from '../../../Component/NavBox/NavBox';
-import RadioBox from '../../../Component/RadioBox/RadioBox';
-import SelectFrame from '../../../Component/SelectFrame/SelectFrame';
+import React from "react";
+import LinkBox from "../../../Component/NavBox/NavBox";
+import RadioBox from "../../../Component/RadioBox/RadioBox";
+import SelectFrame from "../../../Component/SelectFrame/SelectFrame";
 import {
   CoffeType,
   ComputerTimeType,
   MeetType,
-} from '../../../Constant/DailyType';
-import { PaginationInfo } from '../../../Constant/Page';
-import useDailySelect from '../../../hook/useDailySelect';
+} from "../../../Constant/DailyType";
+import { PaginationInfo } from "../../../Constant/Page";
+import useDailySelect from "../useDailySelect";
 
 function ComputerTimeSelect() {
   const { setSelectedItem } = useDailySelect();

@@ -1,12 +1,12 @@
-import React, { useCallback, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import NavBox from '../../Component/NavBox/NavBox';
-import Loading from '../../Component/Loading/Loading';
-import useGetDistance from '../../hook/useGetDistance';
-import useGetSemi from '../../hook/useGetSemi';
-import { RootState } from '../../redux';
-import S from './SemiResult.styled';
-import ExplainBox from '../../Component/ExplainBox/ExplainBox';
+import React, { useCallback, useEffect } from "react";
+import { useSelector } from "react-redux";
+import NavBox from "../../Component/NavBox/NavBox";
+import Loading from "../../Component/Loading/Loading";
+import useGetDistance from "../../hook/useGetDistance";
+import useGetSemi from "./useGetSemi";
+import { RootState } from "../../redux";
+import S from "./SemiResult.styled";
+import ExplainBox from "../../Component/ExplainBox/ExplainBox";
 
 function SemiResult() {
   const { data, error, isLoading } = useGetDistance();
@@ -14,7 +14,7 @@ function SemiResult() {
 
   return (
     <>
-      {(isLoading || isSemiLoading) ? (
+      {isLoading || isSemiLoading ? (
         <Loading />
       ) : (
         <S.SemiResultWrapper>

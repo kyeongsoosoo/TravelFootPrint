@@ -33,7 +33,7 @@ export interface OffsetSelectType extends SelectType {
 
 export type SelectionCategory =
   | "배달 음식"
-  | "isDriving"
+  | "자동차 타기"
   | "커피 마시기"
   | "고기 먹기"
   | "스트리밍 시청하기"

@@ -1,14 +1,14 @@
-import { SelectType } from '../lib/types';
-import { DAILY_STATE } from '../redux/daily/daily';
-import { DISTANCE_STATE } from '../redux/distance/distance';
-import { FOOD_STATE } from '../redux/food/food';
-import { offset, OFFSET_STATE, OFFSET_VALUE } from '../redux/offset/offset';
+import { SelectType } from "../lib/types";
+import { DAILY_STATE } from "../redux/daily/daily";
+import { DISTANCE_STATE } from "../redux/distance/distance";
+import { FOOD_STATE } from "../redux/food/food";
+import { offset, OFFSET_STATE, OFFSET_VALUE } from "../redux/offset/offset";
 
 type FoodEntry = [
   string,
   {
     cost: number;
-  } | null,
+  } | null
 ][];
 
 type ItemEntry = [string, SelectType][];
@@ -28,7 +28,7 @@ export class OffsetTotalService implements ITotalProp {
 
 function getOffsetListTotal(offsetObj: [string, OFFSET_VALUE][]) {
   return offsetObj.reduce((acc, curr) => {
-    if (typeof curr[1].cost === 'boolean') return 0;
+    if (typeof curr[1].cost === "boolean") return 0;
     return acc + curr[1].cost * curr[1].count;
   }, 0);
 }
@@ -63,9 +63,8 @@ export class DistanceTotalService implements ITotalProp {
 }
 
 function getDistanceTotal(distanceList: DISTANCE_STATE) {
-  if (distanceList.transport == 'walk/Bike') return 0;
   if (distanceList.total == null) return 0;
-  return (parseInt(distanceList.total) * 145) / 100;
+  return parseInt(distanceList.total) * 0.2;
 }
 
 export class DailyTotalService implements ITotalProp {
@@ -83,7 +82,7 @@ function getDailyListEntry(ItemList: DAILY_STATE) {
 
 function getDailyListTotal(ItemList: ItemEntry) {
   const totalResult = ItemList.reduce((acc, cur) => {
-    if (typeof cur[1].cost === 'boolean') return acc;
+    if (typeof cur[1].cost === "boolean") return acc;
     else return (acc += cur[1].cost);
   }, 0);
   return totalResult;
