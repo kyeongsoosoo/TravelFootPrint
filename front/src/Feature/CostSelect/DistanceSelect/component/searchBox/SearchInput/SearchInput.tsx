@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { LocationType } from '../../../../../../lib/types';
+import React, { useState } from "react";
+import { LocationType } from "../../../../../../lib/types";
 
-import S from './SearchInput.styled';
+import S from "./SearchInput.styled";
 
-import SearchBoxResult from '../SearchResultBox/SearchBoxResult';
+import SearchBoxResult from "../SearchResultBox/SearchBoxResult";
 
 interface ISearchInput {
   type: LocationType;
@@ -12,21 +12,29 @@ interface ISearchInput {
 function SearchInput(props: ISearchInput) {
   const [isOpen, setOpen] = useState(false);
   const [address, setAddr] = useState<string>();
-  const [value, setValue] = useState<string>('');
+  const [value, setValue] = useState<string>("");
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
   };
 
-  const handleEnter = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter') {
-      setAddr(value);
-      setOpen(!isOpen);
+  const handleEnter = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      toggleInput();
     }
   };
 
+  const handleSearchClick = () => {
+    toggleInput();
+  };
+
+  function toggleInput() {
+    setAddr(value);
+    setOpen(!isOpen);
+  }
+
   const placeholderContent =
-    props.type == 0 ? '출발지를 입력하세요' : '도착지를 입력하세요';
+    props.type == 0 ? "출발지를 입력하세요" : "도착지를 입력하세요";
 
   return (
     <S.SearchTableWrapper>
@@ -37,18 +45,19 @@ function SearchInput(props: ISearchInput) {
             placeholder={address || placeholderContent}
             onChange={handleInput}
             onClick={() => {
-              setValue('');
-              setAddr('');
+              setValue("");
+              setAddr("");
             }}
             value={value}
           ></S.SearchInputInp>
+          <S.SearchSubmitBtn onClick={handleSearchClick} />
         </>
       </S.SearchInputWrapper>
       {isOpen && (
         <SearchBoxResult
           type={props.type}
           searchKey={address}
-          setInput={val => {
+          setInput={(val) => {
             setOpen(!open);
             setValue(val);
           }}

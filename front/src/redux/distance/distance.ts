@@ -1,5 +1,5 @@
-import { action, createReducer } from 'typesafe-actions';
-import { TtransportType, ICord } from '../../lib/types';
+import { action, createReducer } from "typesafe-actions";
+import { TtransportType, ICord } from "../../lib/types";
 import {
   DISTANCE_ACTION,
   DISTANCE_ARRIVE,
@@ -8,7 +8,7 @@ import {
   DISTANCE_RESET,
   DISTANCE_TOTAL,
   DISTANCE_TRANSPORT,
-} from './action';
+} from "./action";
 
 export type DISTANCE_STATE = {
   isDriving: boolean;
@@ -44,7 +44,7 @@ export const distance = createReducer<DISTANCE_STATE, DISTANCE_ACTION>(
     }),
     [DISTANCE_TOTAL]: (state, action) => ({
       ...state,
-      total: action.payload,
+      total: `${parseInt(action.payload, 10)}`,
     }),
     [DISTANCE_TRANSPORT]: (state, action) => ({
       ...state,
@@ -53,5 +53,5 @@ export const distance = createReducer<DISTANCE_STATE, DISTANCE_ACTION>(
     [DISTANCE_RESET]: () => {
       return initialState;
     },
-  },
+  }
 );

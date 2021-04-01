@@ -1,10 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { responsiveSize } from "../../../../../lib/css/mixin";
 
 const SearchBoxWrapper = styled.section`
   display: flex;
   flex-direction: column;
   margin-top: 10%;
-  width: 100%;
+  ${responsiveSize(600, 50, 300, 50)}
   min-height: 50%;
 `;
 
