@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { flexCenter, responsiveSize } from '../../../../../../lib/css/mixin';
+import styled from "styled-components";
+import { flexCenter, responsiveSize } from "../../../../../../lib/css/mixin";
 
 const SearchResultBoxWrapper = styled.div`
-  ${responsiveSize(600, 600, 300, 400)}
+  ${responsiveSize(500, 600, 250, 400)}
   @media all and (min-width: 768px) {
     max-height: 600px;
   }
@@ -11,7 +11,7 @@ const SearchResultBoxWrapper = styled.div`
   @media all and (max-width: 767px) {
     max-height: 400px;
   }
-  
+
   flex-shrink: 0;
   background-color: white;
   overflow-y: scroll;
@@ -21,7 +21,7 @@ const SearchResultBoxWrapper = styled.div`
 const SearchResultItemWrapper = styled.article`
   display: flex;
   flex-shrink: 0;
-  ${responsiveSize(600, 70, 300, 50)}
+  ${responsiveSize(500, 70, 250, 50)}
   border-top: 1px solid black;
 `;
 
@@ -30,7 +30,7 @@ const SRInumberingContent = styled.div`
   border-radius: 15px;
   width: 50%;
   height: 50%;
-  background-color: ${props => props.theme.mainColor};
+  background-color: ${(props) => props.theme.mainColor};
   color: white;
 `;
 
@@ -47,14 +47,15 @@ type SRItextPlaceNameType = {
 
 const SRItextPlaceName = styled.h1<SRItextPlaceNameType>`
   width: 100%;
-  ${props => (props.overSize ? props.theme.smallFont : props.theme.middleFont)}
+  ${(props) =>
+    props.overSize ? props.theme.smallFont : props.theme.middleFont}
   font-weight: 800;
-  color: ${props => props.theme.fontColor};
+  color: ${(props) => props.theme.fontColor};
 `;
 
 const SRItextAddressName = styled.h2`
   width: 100%;
-  ${props => props.theme.smallFont};
+  ${(props) => props.theme.smallFont};
   font-weight: 400;
 `;
 

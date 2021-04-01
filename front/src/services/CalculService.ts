@@ -64,7 +64,7 @@ export class DistanceTotalService implements ITotalProp {
 
 function getDistanceTotal(distanceList: DISTANCE_STATE) {
   if (distanceList.total == null) return 0;
-  return parseInt(distanceList.total) * 0.2;
+  return Math.floor(parseFloat(distanceList.total) * 0.2);
 }
 
 export class DailyTotalService implements ITotalProp {
