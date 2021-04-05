@@ -16,6 +16,7 @@ const SearchTableWrapper = styled.div`
 
 const SearchInputWrapper = styled.div`
   ${flexCenter}
+  justify-content: flex-start;
   flex-shrink: 0;
   flex-direction: row;
   ${responsiveSize(600, 70, 300, 50)}
