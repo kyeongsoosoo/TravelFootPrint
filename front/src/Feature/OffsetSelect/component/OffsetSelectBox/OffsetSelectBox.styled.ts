@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { flexCenter, responsiveSize } from '../../../../lib/css/mixin';
+import styled from "styled-components";
+import { flexCenter, responsiveSize } from "../../../../lib/css/mixin";
 
 const OffsetSelectBoxWrapper = styled.main`
   ${flexCenter}
@@ -14,7 +14,7 @@ const OffsetSelectBox = styled.div`
   justify-content: center;
   align-items: space-between;
   padding: 5% 2%;
-  ${responsiveSize(700, 500, 320, 320)}
+  ${responsiveSize(700, 450, 320, 300)}
   min-height: 300px;
   border-radius: 25px;
   background-color: white;
@@ -46,7 +46,7 @@ const OffsetItemTextTitle = styled.div`
 const OffsetItemTextDescript = styled.div`
   font-size: ${({ theme }) => theme.smallFont};
   margin-top: 10px;
-  color: ${props => props.theme.fontColor};
+  color: ${(props) => props.theme.fontColor};
 `;
 
 export default {
