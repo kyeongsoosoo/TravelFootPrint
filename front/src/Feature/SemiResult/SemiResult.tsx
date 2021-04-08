@@ -24,7 +24,10 @@ function SemiResult() {
           <S.SemiResultTitle>입니다.</S.SemiResultTitle>
           <ExplainBox ItemList={daily} />
           <S.SemiResultTextBox>
-            나의 하루 탄소발자국을 줄여 <br /> 여행발자국을 늘려볼까요?
+            일상 속 적은 노력으로도 <br /> 탄소발자국을 줄일 수 있습니다.
+          </S.SemiResultTextBox>
+          <S.SemiResultTextBox>
+            탄소발자국을 줄인 후, <br /> 그만큼 멀리 여행을 떠나볼까요?
           </S.SemiResultTextBox>
           <NavBox prevLink="/select/isDriving" nextLink="/select/offset" />
         </S.SemiResultWrapper>
