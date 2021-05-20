@@ -1,13 +1,16 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Route, Switch, useHistory } from "react-router";
 import Home from "./Feature/Home/Home";
 import S from "./App.styled";
 
 import SemiResult from "./Feature/SemiResult/SemiResult";
 
-import FinalResult from "./Feature/FinalResult/FinalResult";
+// import FinalResult from "./Feature/FinalResult/FinalResult";
 
 import CostSelect from "./Feature/CostSelect/CostSelect";
+import FinalResult from "./Feature/FinalResult/FinalResult";
+
+const Final = lazy(() => import("./Feature/FinalResult/FinalResult"));
 
 function App() {
   const history = useHistory();
@@ -28,7 +31,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/select" component={CostSelect} />
           <Route path="/result/semi" exact component={SemiResult} />
-          <Route path="/result/final" exact component={FinalResult} />
+          <Route path="/result/final" exact component={Final} />
         </Switch>
       </S.AppMain>
       <Switch>

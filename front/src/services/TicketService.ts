@@ -1,5 +1,8 @@
-import { TicketInfo, Ticket } from '../Constant/TicketType';
-
+import { TicketInfo, Ticket } from "../Constant/TicketType";
+// const TicketInfo = import("../Constant/TicketType").then(
+//   (res) => res.TicketInfo
+// );
+// const Ticket = import("../Constant/TicketType").then((res) => res.Ticket);
 export class TicketService {
   constructor(private travelFoot: number) {}
 
@@ -9,9 +12,9 @@ export class TicketService {
     console.log(TicketInfoObj);
     //scope[0] = 출발점, scope[1] = 도착점
     const selectedCity = TicketInfoObj.find(
-      item =>
+      (item) =>
         item[1].scope[0] <= this.travelFoot &&
-        item[1].scope[1] >= this.travelFoot,
+        item[1].scope[1] >= this.travelFoot
     );
     console.log(selectedCity);
 
@@ -19,13 +22,13 @@ export class TicketService {
   }
 
   getTicket() {
-    const city = this.getCity() || TicketInfo['서울'];
+    const city = this.getCity() || TicketInfo["서울"];
 
     const ticketObj = Object.entries(Ticket);
 
-    const ticketURL = ticketObj.find(item => item[0] === city[0]);
+    const ticketURL = ticketObj.find((item) => item[0] === city[0]);
 
-    if (ticketURL === undefined) return Ticket['서울'];
+    if (ticketURL === undefined) return Ticket["서울"];
     return ticketURL[1];
   }
 }
