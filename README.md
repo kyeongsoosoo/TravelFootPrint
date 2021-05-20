@@ -4,7 +4,7 @@
 
 일상을 보내면서 얼마만큼의 탄소발자국을 쓰는지 계산합니다. 그 활동들을 줄여 아낀 탄소발자국으로 어느지역까지 여행할 수 있을지 알아봅니다.
 
-[여행의 발자국](https://goofy-bardeen-19cc15.netlify.app/result/final)
+[여행의 발자국](https://goofy-bardeen-19cc15.netlify.app)
 
 ## 사용 기술
 
