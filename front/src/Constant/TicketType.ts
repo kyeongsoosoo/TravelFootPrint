@@ -12,22 +12,22 @@ import {
   Seoul,
   Suwon,
   Yeosu,
-} from '../lib/assets/tickets';
+} from "../lib/assets/tickets";
 
 export type TicketCityType =
-  | '부산'
-  | '부여'
-  | '담양'
-  | '강릉'
-  | '가평'
-  | '경주'
-  | '횡성'
-  | '제주'
-  | '전주'
-  | '포항'
-  | '서울'
-  | '수원'
-  | '여수';
+  | "부산"
+  | "부여"
+  | "담양"
+  | "강릉"
+  | "가평"
+  | "경주"
+  | "횡성"
+  | "제주"
+  | "전주"
+  | "포항"
+  | "서울"
+  | "수원"
+  | "여수";
 
 export type TicketType = {
   [key in TicketCityType]: URL;
@@ -91,12 +91,12 @@ export const TicketInfo: TicketInfoType = {
   },
   전주: {
     scope: [3701, 4500],
-    description: '전주 한옥마을에서\n 연인과 한복 데이트 어때요?',
+    description: "전주 한옥마을에서\n 연인과 한복 데이트 어때요?",
   },
   포항: {
     scope: [7401, 8000],
     description:
-      '우리나라 내륙에서 해가 가장 먼저 뜨는\n 호미곶으로 놀러가봐요!',
+      "우리나라 내륙에서 해가 가장 먼저 뜨는\n 호미곶으로 놀러가봐요!",
   },
   서울: {
     scope: [0, 300],
