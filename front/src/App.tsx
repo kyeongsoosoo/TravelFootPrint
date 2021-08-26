@@ -1,5 +1,5 @@
 import React, { lazy } from "react";
-import { Route, Switch, useHistory } from "react-router";
+import { Redirect, Route, Switch, useHistory } from "react-router";
 import Home from "./Feature/Home/Home";
 import S from "./App.styled";
 
@@ -32,6 +32,7 @@ function App() {
           <Route path="/select" component={CostSelect} />
           <Route path="/result/semi" exact component={SemiResult} />
           <Route path="/result/final" exact component={Final} />
+          <Redirect to='/'/>
         </Switch>
       </S.AppMain>
       <Switch>
